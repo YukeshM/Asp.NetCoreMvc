@@ -1,0 +1,41 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<Department>
+<div class="row">
+    <div class="col-6">
+        <h1>Department Details</h1>
+    </div>
+    <div class="col-6">
+        <a asp-controller="Department" asp-action="Create" class="btn btn-info">Create New Department</a>
+    </div>
+</div>
+
+@**@
+
+<div class="row">
+    <div class="col-12">
+        <table class="table table-bordered table-striped" style="width: 100%">
+
+            <thead>
+                <tr>
+                    <th>Department Id</th>
+                    <th>Department Name</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach(var data in Model)
+                {
+                    <tr>
+                        <td width="10%">@data.Id</td>
+                        <td width="30%">@data.DepartmentName</td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+</div>

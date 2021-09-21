@@ -1,0 +1,15 @@
+D:\gislen\asp.netMvcCore\HotelMenuApplicationRepository.Models\bin\Debug\net5.0\HotelMenuApplicationRepository.Models.deps.json
+D:\gislen\asp.netMvcCore\HotelMenuApplicationRepository.Models\bin\Debug\net5.0\HotelMenuApplicationRepository.Models.runtimeconfig.json
+D:\gislen\asp.netMvcCore\HotelMenuApplicationRepository.Models\bin\Debug\net5.0\HotelMenuApplicationRepository.Models.runtimeconfig.dev.json
+D:\gislen\asp.netMvcCore\HotelMenuApplicationRepository.Models\bin\Debug\net5.0\HotelMenuApplicationRepository.Models.dll
+D:\gislen\asp.netMvcCore\HotelMenuApplicationRepository.Models\bin\Debug\net5.0\ref\HotelMenuApplicationRepository.Models.dll
+D:\gislen\asp.netMvcCore\HotelMenuApplicationRepository.Models\bin\Debug\net5.0\HotelMenuApplicationRepository.Models.pdb
+D:\gislen\asp.netMvcCore\HotelMenuApplicationRepository.Models\obj\Debug\net5.0\HotelMenuApplicationRepository.Models.csproj.AssemblyReference.cache
+D:\gislen\asp.netMvcCore\HotelMenuApplicationRepository.Models\obj\Debug\net5.0\HotelMenuApplicationRepository.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\gislen\asp.netMvcCore\HotelMenuApplicationRepository.Models\obj\Debug\net5.0\HotelMenuApplicationRepository.Models.AssemblyInfoInputs.cache
+D:\gislen\asp.netMvcCore\HotelMenuApplicationRepository.Models\obj\Debug\net5.0\HotelMenuApplicationRepository.Models.AssemblyInfo.cs
+D:\gislen\asp.netMvcCore\HotelMenuApplicationRepository.Models\obj\Debug\net5.0\HotelMenuApplicationRepository.Models.csproj.CoreCompileInputs.cache
+D:\gislen\asp.netMvcCore\HotelMenuApplicationRepository.Models\obj\Debug\net5.0\HotelMenuApplicationRepository.Models.dll
+D:\gislen\asp.netMvcCore\HotelMenuApplicationRepository.Models\obj\Debug\net5.0\ref\HotelMenuApplicationRepository.Models.dll
+D:\gislen\asp.netMvcCore\HotelMenuApplicationRepository.Models\obj\Debug\net5.0\HotelMenuApplicationRepository.Models.pdb
+D:\gislen\asp.netMvcCore\HotelMenuApplicationRepository.Models\obj\Debug\net5.0\HotelMenuApplicationRepository.Models.genruntimeconfig.cache

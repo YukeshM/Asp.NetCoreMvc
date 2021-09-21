@@ -1,0 +1,15 @@
+D:\gislen\asp.netMvcCore\HotelMenuRepository.Model\bin\Debug\net5.0\HotelMenuRepository.Model.deps.json
+D:\gislen\asp.netMvcCore\HotelMenuRepository.Model\bin\Debug\net5.0\HotelMenuRepository.Model.runtimeconfig.json
+D:\gislen\asp.netMvcCore\HotelMenuRepository.Model\bin\Debug\net5.0\HotelMenuRepository.Model.runtimeconfig.dev.json
+D:\gislen\asp.netMvcCore\HotelMenuRepository.Model\bin\Debug\net5.0\HotelMenuRepository.Model.dll
+D:\gislen\asp.netMvcCore\HotelMenuRepository.Model\bin\Debug\net5.0\ref\HotelMenuRepository.Model.dll
+D:\gislen\asp.netMvcCore\HotelMenuRepository.Model\bin\Debug\net5.0\HotelMenuRepository.Model.pdb
+D:\gislen\asp.netMvcCore\HotelMenuRepository.Model\obj\Debug\net5.0\HotelMenuRepository.Model.csproj.AssemblyReference.cache
+D:\gislen\asp.netMvcCore\HotelMenuRepository.Model\obj\Debug\net5.0\HotelMenuRepository.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\gislen\asp.netMvcCore\HotelMenuRepository.Model\obj\Debug\net5.0\HotelMenuRepository.Model.AssemblyInfoInputs.cache
+D:\gislen\asp.netMvcCore\HotelMenuRepository.Model\obj\Debug\net5.0\HotelMenuRepository.Model.AssemblyInfo.cs
+D:\gislen\asp.netMvcCore\HotelMenuRepository.Model\obj\Debug\net5.0\HotelMenuRepository.Model.csproj.CoreCompileInputs.cache
+D:\gislen\asp.netMvcCore\HotelMenuRepository.Model\obj\Debug\net5.0\HotelMenuRepository.Model.dll
+D:\gislen\asp.netMvcCore\HotelMenuRepository.Model\obj\Debug\net5.0\ref\HotelMenuRepository.Model.dll
+D:\gislen\asp.netMvcCore\HotelMenuRepository.Model\obj\Debug\net5.0\HotelMenuRepository.Model.pdb
+D:\gislen\asp.netMvcCore\HotelMenuRepository.Model\obj\Debug\net5.0\HotelMenuRepository.Model.genruntimeconfig.cache

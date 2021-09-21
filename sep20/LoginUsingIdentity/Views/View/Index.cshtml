@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Feedback>
+@{
+    ViewBag.Title = "Feedback Form";
+}
+
+
+<div class="row">
+    <div class="col-6">
+        <h1>Feedback Details</h1>
+    </div>
+</div>
+
+<table class="table table-bordered table-striped">
+
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Multicheck</th>
+            <th>Text area</th>
+            <th>Radio button</th>
+            <th>Slider</th>
+            <th>Star</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td width="10%">@item.Id</td>
+                <td width="20%">@item.MultiCheck</td>
+                <td width="20%">@item.TextArea</td>
+                <td width="20%">@item.RadioButton</td>
+                <td width="15%">@item.Slider</td>
+                <td width="15%">@item.Star</td>
+            </tr>
+
+        }
+    </tbody>
+
+</table>
