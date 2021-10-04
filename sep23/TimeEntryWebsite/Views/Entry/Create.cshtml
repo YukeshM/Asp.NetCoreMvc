@@ -1,0 +1,50 @@
+﻿@model TimeEntryWebsite.ViewModel.EntryTimeViewModel;
+
+@{
+    ViewBag.Title = "Time entry form";
+}
+
+<h1>Employee's Time Entry Form</h1>
+
+<form method="post" asp-action="Create">
+
+    <div class="row">
+        <div class="col-12">
+
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <div class="col-3">
+                <label asp-for="Name"></label>
+                <input type="text" asp-for="Name" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="col-3">
+                <label asp-for="InTime"></label>
+                <input type="datetime-local" asp-for="InTime" />
+                <span asp-validation-for="InTime" class="text-danger"></span>
+            </div>
+
+            <div class="col-3">
+                <label asp-for="OutTime"></label>
+                <input type="datetime-local" asp-for="OutTime" />
+                <span asp-validation-for="OutTime" class="text-danger"></span>
+            </div>
+
+            <div class="col-3 ">
+                <label asp-for="BreakInTime"></label>
+                <input type="datetime-local" asp-for="BreakInTime" />
+                <span asp-validation-for="BreakInTime" class="text-danger"></span>
+            </div>
+
+            <div class="col-3 ">
+                <label asp-for="BreakOutTime"></label>
+                <input type="datetime-local" asp-for="BreakOutTime" />
+                <span asp-validation-for="BreakOutTime" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+        </div>
+    </div>
+</form>

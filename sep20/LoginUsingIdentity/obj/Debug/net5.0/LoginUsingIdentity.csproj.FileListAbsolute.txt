@@ -395,3 +395,4 @@ D:\gislen\asp.netMvcCore\sep20\LoginUsingIdentity\bin\Debug\net5.0\runtimes\unix
 D:\gislen\asp.netMvcCore\sep20\LoginUsingIdentity\bin\Debug\net5.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
 D:\gislen\asp.netMvcCore\sep20\LoginUsingIdentity\obj\Debug\net5.0\Razor\Views\View\Index.cshtml.g.cs
 D:\gislen\asp.netMvcCore\sep20\LoginUsingIdentity\obj\Debug\net5.0\Razor\Views\View\Create.cshtml.g.cs
+D:\gislen\asp.netMvcCore\sep20\LoginUsingIdentity\obj\Debug\net5.0\Razor\Views\Shared\Feedback.cshtml.g.cs
