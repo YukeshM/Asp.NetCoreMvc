@@ -1,0 +1,12 @@
+D:\gislen\asp.netMvcCore\sep23\TimeEntryWith3Tier\BusinessLogic\bin\Debug\net5.0\BusinessLogic.deps.json
+D:\gislen\asp.netMvcCore\sep23\TimeEntryWith3Tier\BusinessLogic\bin\Debug\net5.0\BusinessLogic.dll
+D:\gislen\asp.netMvcCore\sep23\TimeEntryWith3Tier\BusinessLogic\bin\Debug\net5.0\ref\BusinessLogic.dll
+D:\gislen\asp.netMvcCore\sep23\TimeEntryWith3Tier\BusinessLogic\bin\Debug\net5.0\BusinessLogic.pdb
+D:\gislen\asp.netMvcCore\sep23\TimeEntryWith3Tier\BusinessLogic\obj\Debug\net5.0\BusinessLogic.csproj.AssemblyReference.cache
+D:\gislen\asp.netMvcCore\sep23\TimeEntryWith3Tier\BusinessLogic\obj\Debug\net5.0\BusinessLogic.GeneratedMSBuildEditorConfig.editorconfig
+D:\gislen\asp.netMvcCore\sep23\TimeEntryWith3Tier\BusinessLogic\obj\Debug\net5.0\BusinessLogic.AssemblyInfoInputs.cache
+D:\gislen\asp.netMvcCore\sep23\TimeEntryWith3Tier\BusinessLogic\obj\Debug\net5.0\BusinessLogic.AssemblyInfo.cs
+D:\gislen\asp.netMvcCore\sep23\TimeEntryWith3Tier\BusinessLogic\obj\Debug\net5.0\BusinessLogic.csproj.CoreCompileInputs.cache
+D:\gislen\asp.netMvcCore\sep23\TimeEntryWith3Tier\BusinessLogic\obj\Debug\net5.0\BusinessLogic.dll
+D:\gislen\asp.netMvcCore\sep23\TimeEntryWith3Tier\BusinessLogic\obj\Debug\net5.0\ref\BusinessLogic.dll
+D:\gislen\asp.netMvcCore\sep23\TimeEntryWith3Tier\BusinessLogic\obj\Debug\net5.0\BusinessLogic.pdb

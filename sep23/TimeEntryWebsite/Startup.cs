@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TimeEntryWebsite.Data;
+using TimeEntryWebsite.ViewModel;
 
 namespace TimeEntryWebsite
 {
@@ -35,12 +36,17 @@ namespace TimeEntryWebsite
 
             services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
+
             services.AddMvc(options =>
             {
                 var policy = new AuthorizationPolicyBuilder().
                                 RequireAuthenticatedUser().Build();
                 options.Filters.Add(new AuthorizeFilter(policy));
             }).AddXmlSerializerFormatters();
+
+            //services.AddScoped<RoleViewModel>();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

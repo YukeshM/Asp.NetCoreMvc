@@ -19,7 +19,7 @@ namespace TimeEntryWebsite.Controllers
         }
 
         [HttpGet]
-        [Authorize]
+        [Authorize(Roles = "User, Admin")]
         public IActionResult Index()
         {
             IEnumerable<EntryTimeViewModel> entryTimeTableList = _dbContext.EntryTimeTable;
@@ -46,10 +46,18 @@ namespace TimeEntryWebsite.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public IActionResult Admin()
         {
             IEnumerable<EntryTimeViewModel> entryTimeTableList = _dbContext.EntryTimeTable;
             return View(entryTimeTableList);
+        }
+
+        [HttpGet]
+        [AllowAnonymous]
+        public IActionResult AccessDenied()
+        {
+            return View();
         }
     }
 }

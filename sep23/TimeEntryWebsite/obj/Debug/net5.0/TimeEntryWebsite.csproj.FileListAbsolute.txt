@@ -392,4 +392,11 @@ D:\gislen\asp.netMvcCore\sep23\TimeEntryWebsite\obj\Debug\net5.0\Razor\Views\Acc
 D:\gislen\asp.netMvcCore\sep23\TimeEntryWebsite\obj\Debug\net5.0\Razor\Views\Entry\Create.cshtml.g.cs
 D:\gislen\asp.netMvcCore\sep23\TimeEntryWebsite\obj\Debug\net5.0\Razor\Views\Entry\Admin.cshtml.g.cs
 D:\gislen\asp.netMvcCore\sep23\TimeEntryWebsite\obj\Debug\net5.0\Razor\Views\Administration\CreateRole.cshtml.g.cs
-D:\gislen\asp.netMvcCore\sep23\TimeEntryWebsite\obj\Debug\net5.0\Razor\Views\Administration\ListRoles.cshtml.g.cs
+D:\gislen\asp.netMvcCore\sep23\TimeEntryWebsite\obj\Debug\net5.0\Razor\Views\Administration\ListRole.cshtml.g.cs
+D:\gislen\asp.netMvcCore\sep23\TimeEntryWebsite\obj\Debug\net5.0\Razor\Views\Administration\DeleteRole.cshtml.g.cs
+D:\gislen\asp.netMvcCore\sep23\TimeEntryWebsite\obj\Debug\net5.0\Razor\Views\Administration\EditRole.cshtml.g.cs
+D:\gislen\asp.netMvcCore\sep23\TimeEntryWebsite\obj\Debug\net5.0\Razor\Views\Shared\NotFound.cshtml.g.cs
+D:\gislen\asp.netMvcCore\sep23\TimeEntryWebsite\obj\Debug\net5.0\Razor\Views\Administration\EditUserInRole.cshtml.g.cs
+D:\gislen\asp.netMvcCore\sep23\TimeEntryWebsite\obj\Debug\net5.0\Razor\Views\Administration\AccessDenied.cshtml.g.cs
+D:\gislen\asp.netMvcCore\sep23\TimeEntryWebsite\obj\Debug\net5.0\Razor\Views\Entry\AccessDenied.cshtml.g.cs
+D:\gislen\asp.netMvcCore\sep23\TimeEntryWebsite\obj\Debug\net5.0\Razor\Views\Account\AccessDenied.cshtml.g.cs
