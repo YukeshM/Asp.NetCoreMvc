@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using TimeEntryWebsite.ViewModel;
+using TimeEntryWebsite.Models;
 
 namespace TimeEntryWebsite.Controllers
 {
@@ -28,7 +28,7 @@ namespace TimeEntryWebsite.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateRole(RoleViewModel model)
+        public async Task<IActionResult> CreateRole(RoleModel model)
         {
             if (ModelState.IsValid)
             {
@@ -54,6 +54,7 @@ namespace TimeEntryWebsite.Controllers
         }
 
         [HttpGet]
+        [Authorize(Roles = "Admin")]
         public IActionResult ListRole()
         {
             var roles = _roleManager.Roles;
@@ -72,7 +73,7 @@ namespace TimeEntryWebsite.Controllers
                 return View("NotFound");
             }
 
-            var model = new EditRoleViewModel
+            var model = new EditRoleModel
             {
                 Id = result.Id,
                 RoleName = result.Name
@@ -90,7 +91,7 @@ namespace TimeEntryWebsite.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> EditRole(EditRoleViewModel model)
+        public async Task<IActionResult> EditRole(EditRoleModel model)
         {
             var result = await _roleManager.FindByIdAsync(model.Id);
 
@@ -138,11 +139,11 @@ namespace TimeEntryWebsite.Controllers
                 return View("NotFound");
             }
 
-            var model = new List<EditUserRoleViewModel>();
+            var model = new List<EditUserRoleModel>();
 
             foreach (var user in _userManager.Users)
             {
-                var userRoleViewModel = new EditUserRoleViewModel()
+                var userRoleViewModel = new EditUserRoleModel()
                 {
                     Id = user.Id,
                     Name = user.UserName
@@ -163,7 +164,7 @@ namespace TimeEntryWebsite.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> EditUserInRole(List<EditUserRoleViewModel>                                                  model, string roleId)
+        public async Task<IActionResult> EditUserInRole(List<EditUserRoleModel>                                                  model, string roleId)
         {
             var role = await _roleManager.FindByIdAsync(roleId);
 

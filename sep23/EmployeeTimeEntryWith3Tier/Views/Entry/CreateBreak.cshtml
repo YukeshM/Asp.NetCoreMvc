@@ -1,0 +1,50 @@
+﻿
+@model DataAccessLayer.Models.BreakTime;
+
+@{
+    ViewBag.Title = "Break Entry Page";
+}
+
+<h2>Break In-Time and Out-Time Page.</h2>
+
+
+<form method="post" asp-action="CreateBreak">
+
+    <div class="row">
+        <div class="col-12">
+
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+
+            <div class="col-3 ">
+                <label asp-for="EntryId"></label>
+                <input type="number" asp-for="EntryId" />
+                <span asp-validation-for="EntryId" class="text-danger"></span>
+            </div>
+
+            <div class="col-3 ">
+                <label asp-for="BreakInTime"></label>
+                <input type="datetime-local" asp-for="BreakInTime" />
+                <span asp-validation-for="BreakInTime" class="text-danger"></span>
+            </div>
+
+            <div class="col-3 ">
+                <label asp-for="BreakOutTime"></label>
+                <input type="datetime-local" asp-for="BreakOutTime" />
+                <span asp-validation-for="BreakOutTime" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">
+                Submit
+            </button>
+
+        </div>
+    </div>
+</form>
+
+<style>
+    button {
+        margin-top: 20px;
+        margin-left: 60px;
+    }
+</style>

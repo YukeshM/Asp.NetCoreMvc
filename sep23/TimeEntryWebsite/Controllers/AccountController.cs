@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
-using TimeEntryWebsite.ViewModel;
+using TimeEntryWebsite.Models;
 
 namespace TimeEntryWebsite.Controllers
 {
@@ -28,7 +28,7 @@ namespace TimeEntryWebsite.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        public async Task<IActionResult> Register(RegistrationViewModel model)
+        public async Task<IActionResult> Register(RegistrationModel model)
         {
 
             if (ModelState.IsValid)
@@ -43,7 +43,7 @@ namespace TimeEntryWebsite.Controllers
                 if (result.Succeeded)
                 {
                     await _signInManager.SignInAsync(userDetails, isPersistent: false);
-                    return RedirectToAction("Create", "Entry");
+                    return RedirectToAction("Index", "Home");
                 }
 
 
@@ -65,21 +65,36 @@ namespace TimeEntryWebsite.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        public async Task<IActionResult> Login(LoginViewModel model)
+        public async Task<IActionResult> Login(LoginModel model)
         {
             if (ModelState.IsValid)
             {
+                var user = await _userManager.FindByNameAsync(model.Email);
                 var result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, false);
 
                 if (result.Succeeded)
                 {
-                    return RedirectToAction("Create", "Entry");
+                   var role = await _userManager.GetRolesAsync(user);
+                    if (role[0] == "User")
+                    {
+                        return RedirectToAction("Create", "Entry");
+                    }
+                    else if (role[0] == "Admin")
+                    {
+                        return RedirectToAction("Admin", "Entry");
+                    }
+                    else
+                    {
+                        return RedirectToAction("Index", "Home");
+                    }
                 }
                 ModelState.AddModelError(string.Empty, "Invalid login details!");
             }
 
             return View(model);
         }
+
+
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();

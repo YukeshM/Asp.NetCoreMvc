@@ -33,15 +33,8 @@ using Microsoft.AspNetCore.Identity;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 4 "D:\gislen\asp.netMvcCore\sep23\TimeEntryWebsite\Views\_ViewImports.cshtml"
-using TimeEntryWebsite.ViewModel;
-
-#line default
-#line hidden
-#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"550e224c027fdaaac69dd0d01a9114f44536607c", @"/Views/Shared/NotFound.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"eadb3b867be8e59e55bc9b6fdd2b29b3ae42a3b6", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"677d6641e6a2feb807a43e331a7eccadd4bfa7e5", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_NotFound : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("asp-action", "Index", global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -87,7 +80,7 @@ Write(ViewBag.ErrorMessage);
 #line hidden
 #nullable disable
             WriteLiteral("</h1>\r\n\r\n");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "550e224c027fdaaac69dd0d01a9114f44536607c4494", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "550e224c027fdaaac69dd0d01a9114f44536607c4305", async() => {
                 WriteLiteral("click to go for home page.");
             }
             );

@@ -1,4 +1,5 @@
-﻿@model IEnumerable<EntryTimeViewModel>;
+﻿@*@model IEnumerable<EntryTimeViewModel>;*@
+@*@model IEnumerable<BreakTime>;*@
 
 @{
     ViewBag.Title = "Time entry form";
@@ -15,7 +16,7 @@
 
         <table class="table table-bordered table-striped" style="width:100%">
 
-            <thead >
+            <thead>
                 <tr>
                     <th>Id</th>
                     <th>Date</th>
@@ -36,8 +37,7 @@
                         <td width="20%">@data.OutTime.Subtract(@data.InTime)</td>
                         <td width="20%">@data.InTime.TimeOfDay</td>
                         <td width="20%">@data.OutTime.TimeOfDay</td>
-                        <td width="15%">@data.BreakOutTime.Subtract(@data.BreakInTime)</td>
-
+                        <td width="15%"></td>
                     </tr>
                 }
             </tbody>

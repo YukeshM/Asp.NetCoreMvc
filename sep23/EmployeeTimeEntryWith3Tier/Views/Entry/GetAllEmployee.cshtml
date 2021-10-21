@@ -1,0 +1,60 @@
+﻿@model IEnumerable< DataAccessLayer.ViewModel.EmployeeViewModel>
+
+
+@{
+    ViewBag.Title = "Time entry form";
+
+}
+
+
+<h1>Employee's Time Entry Form</h1>
+
+
+<div class="row">
+
+
+    <div class="col-12">
+
+
+        <table class="table table-bordered table-striped" style="width:100%">
+
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>In date</th>
+                    <th>Actual In time</th>
+                    <th>Actual Out time</th>
+                    <th>Total working time</th>
+                    <th>Break time</th>
+
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var data in Model)
+                {
+                <tr>
+                    <td width="5%">@data.Id</td>
+                    <td width="20%">@data.Name</td>
+                    <td width="20%">@data.InDate</td>
+                    <td width="20%">@data.InTime</td>
+                    <td width="20%">@data.OutTime</td>
+                    <td width="20%">@data.OutTime.Subtract(data.InTime)</td>
+                    <td>
+                        @foreach (var breakData in data.BreakList)
+                            {
+                        <p>Total break time:@breakData.BreakOutTime.Subtract(breakData.BreakInTime)</p>
+                            }
+
+                    </td>
+
+
+
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</div>

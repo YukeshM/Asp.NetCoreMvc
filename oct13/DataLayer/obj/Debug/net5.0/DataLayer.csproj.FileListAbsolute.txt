@@ -1,0 +1,15 @@
+D:\gislen\asp.netMvcCore\oct13\DataLayer\bin\Debug\net5.0\DataLayer.deps.json
+D:\gislen\asp.netMvcCore\oct13\DataLayer\bin\Debug\net5.0\DataLayer.runtimeconfig.json
+D:\gislen\asp.netMvcCore\oct13\DataLayer\bin\Debug\net5.0\DataLayer.runtimeconfig.dev.json
+D:\gislen\asp.netMvcCore\oct13\DataLayer\bin\Debug\net5.0\DataLayer.dll
+D:\gislen\asp.netMvcCore\oct13\DataLayer\bin\Debug\net5.0\ref\DataLayer.dll
+D:\gislen\asp.netMvcCore\oct13\DataLayer\bin\Debug\net5.0\DataLayer.pdb
+D:\gislen\asp.netMvcCore\oct13\DataLayer\obj\Debug\net5.0\DataLayer.csproj.AssemblyReference.cache
+D:\gislen\asp.netMvcCore\oct13\DataLayer\obj\Debug\net5.0\DataLayer.GeneratedMSBuildEditorConfig.editorconfig
+D:\gislen\asp.netMvcCore\oct13\DataLayer\obj\Debug\net5.0\DataLayer.AssemblyInfoInputs.cache
+D:\gislen\asp.netMvcCore\oct13\DataLayer\obj\Debug\net5.0\DataLayer.AssemblyInfo.cs
+D:\gislen\asp.netMvcCore\oct13\DataLayer\obj\Debug\net5.0\DataLayer.csproj.CoreCompileInputs.cache
+D:\gislen\asp.netMvcCore\oct13\DataLayer\obj\Debug\net5.0\DataLayer.dll
+D:\gislen\asp.netMvcCore\oct13\DataLayer\obj\Debug\net5.0\ref\DataLayer.dll
+D:\gislen\asp.netMvcCore\oct13\DataLayer\obj\Debug\net5.0\DataLayer.pdb
+D:\gislen\asp.netMvcCore\oct13\DataLayer\obj\Debug\net5.0\DataLayer.genruntimeconfig.cache

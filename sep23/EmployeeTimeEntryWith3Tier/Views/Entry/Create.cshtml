@@ -1,0 +1,56 @@
+﻿
+@model DataAccessLayer.Models.EntryTime;
+
+@{
+    ViewBag.Title = "Time entry form";
+}
+
+<h1>Employee's Time Entry Form</h1>
+
+<form method="post" asp-action="Create">
+
+    <div class="row">
+        <div class="col-12">
+
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <div class="col-3 ">
+                <label asp-for="UserId"></label>
+                <input type="number" asp-for="UserId" />
+                <span asp-validation-for="UserId" class="text-danger"></span>
+            </div>
+
+
+
+            <div class="col-3 ">
+                <label asp-for="InDate"></label>
+                <input type="date" asp-for="InDate" />
+                <span asp-validation-for="InDate" class="text-danger"></span>
+            </div>
+
+            <div class="col-3">
+                <label asp-for="InTime"></label>
+                <input type="datetime-local" asp-for="InTime" />
+                <span asp-validation-for="InTime" class="text-danger"></span>
+            </div>
+
+            <div class="col-3">
+                <label asp-for="OutTime"></label>
+                <input type="datetime-local" asp-for="OutTime" />
+                <span asp-validation-for="OutTime" class="text-danger"></span>
+            </div>
+
+
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+        </div>
+    </div>
+</form>
+
+<style>
+    button {
+        margin-top: 20px;
+        margin-left: 60px;
+    }
+</style>

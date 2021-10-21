@@ -33,15 +33,8 @@ using Microsoft.AspNetCore.Identity;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 4 "D:\gislen\asp.netMvcCore\sep23\TimeEntryWebsite\Views\_ViewImports.cshtml"
-using TimeEntryWebsite.ViewModel;
-
-#line default
-#line hidden
-#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"998bdde6ea48753f381619b63357add58a6448a7", @"/Views/Administration/ListRole.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"eadb3b867be8e59e55bc9b6fdd2b29b3ae42a3b6", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"677d6641e6a2feb807a43e331a7eccadd4bfa7e5", @"/Views/_ViewImports.cshtml")]
     public class Views_Administration_ListRole : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<IdentityRole>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("btn btn-primary"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -94,7 +87,7 @@ using TimeEntryWebsite.ViewModel;
 #line hidden
 #nullable disable
             WriteLiteral("    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "998bdde6ea48753f381619b63357add58a6448a76291", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "998bdde6ea48753f381619b63357add58a6448a76102", async() => {
                 WriteLiteral("Create role");
             }
             );
@@ -140,7 +133,7 @@ using TimeEntryWebsite.ViewModel;
 #line hidden
 #nullable disable
             WriteLiteral("</h5>\r\n    </div>\r\n\r\n    <div class=\"card-footer\">\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "998bdde6ea48753f381619b63357add58a6448a78761", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "998bdde6ea48753f381619b63357add58a6448a78572", async() => {
                 WriteLiteral("Edit");
             }
             );
@@ -174,7 +167,7 @@ using TimeEntryWebsite.ViewModel;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n        ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "998bdde6ea48753f381619b63357add58a6448a711184", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "998bdde6ea48753f381619b63357add58a6448a710995", async() => {
                 WriteLiteral("Delete");
             }
             );
@@ -230,7 +223,7 @@ else
             </h5>
 
             ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "998bdde6ea48753f381619b63357add58a6448a714127", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "998bdde6ea48753f381619b63357add58a6448a713938", async() => {
                 WriteLiteral("Create role");
             }
             );

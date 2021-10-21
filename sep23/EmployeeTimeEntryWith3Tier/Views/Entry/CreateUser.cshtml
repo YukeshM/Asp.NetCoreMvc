@@ -1,0 +1,36 @@
+﻿
+@model DataAccessLayer.Models.User;
+
+@{
+    ViewBag.Title = "Time entry form";
+}
+
+<h1>Employee's Time Entry Form</h1>
+
+<form method="post" asp-action="CreateUser">
+
+    <div class="row">
+        <div class="col-12">
+
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+
+            <div class="col-3">
+                <label asp-for="Name"></label>
+                <input type="text" asp-for="Name" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+        </div>
+    </div>
+</form>
+
+<style>
+    button {
+        margin-top: 20px;
+        margin-left: 60px;
+    }
+</style>

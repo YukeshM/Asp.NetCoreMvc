@@ -33,15 +33,8 @@ using Microsoft.AspNetCore.Identity;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 4 "D:\gislen\asp.netMvcCore\sep23\TimeEntryWebsite\Views\_ViewImports.cshtml"
-using TimeEntryWebsite.ViewModel;
-
-#line default
-#line hidden
-#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7091c65830b0329e613be026ede8a57552863778", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"eadb3b867be8e59e55bc9b6fdd2b29b3ae42a3b6", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"677d6641e6a2feb807a43e331a7eccadd4bfa7e5", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

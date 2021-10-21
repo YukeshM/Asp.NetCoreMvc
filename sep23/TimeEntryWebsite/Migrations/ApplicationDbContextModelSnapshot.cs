@@ -215,7 +215,7 @@ namespace TimeEntryWebsite.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
-            modelBuilder.Entity("TimeEntryWebsite.ViewModel.EntryTimeViewModel", b =>
+            modelBuilder.Entity("TimeEntryWebsite.Models.BreakTimeModel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -228,17 +228,30 @@ namespace TimeEntryWebsite.Migrations
                     b.Property<DateTime>("BreakOutTime")
                         .HasColumnType("datetime2");
 
+                    b.HasKey("Id");
+
+                    b.ToTable("BreakTimeTable");
+                });
+
+            modelBuilder.Entity("TimeEntryWebsite.Models.EntryTimeModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
                     b.Property<DateTime>("InTime")
                         .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("OutTime")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("EntryTimeTable");
                 });
@@ -292,6 +305,15 @@ namespace TimeEntryWebsite.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("TimeEntryWebsite.Models.EntryTimeModel", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId");
+
+                    b.Navigation("User");
                 });
 #pragma warning restore 612, 618
         }
