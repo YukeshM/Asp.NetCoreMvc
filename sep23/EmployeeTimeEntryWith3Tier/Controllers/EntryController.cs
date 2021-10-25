@@ -1,19 +1,17 @@
 ﻿using BusinessLayer;
 using DataAccessLayer.Models;
 using DataAccessLayer.ViewModel;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace EmployeeTimeEntryWith3Tier.Controllers
 {
     public class EntryController : Controller
     {
         private readonly EntryBl _entryBl;
-        public EntryController(EntryBl entryBl)
+        public EntryController()
         {
-            this._entryBl = entryBl;
+            this._entryBl = new EntryBl();
         }
         public IActionResult Index()
 
@@ -22,16 +20,16 @@ namespace EmployeeTimeEntryWith3Tier.Controllers
             return View(result);
         }
 
-    
 
-//        [HttpGet]
-//        [Authorize(Roles = "User, Admin")]
 
-//        public IActionResult Index()
-//        {
-//            IEnumerable<EntryTimeModel> entryTimeTableList = _dbContext.EntryTimeTable;
-//            return View(entryTimeTableList);
-//        }
+        //        [HttpGet]
+        //        [Authorize(Roles = "User, Admin")]
+
+        //        public IActionResult Index()
+        //        {
+        //            IEnumerable<EntryTimeModel> entryTimeTableList = _dbContext.EntryTimeTable;
+        //            return View(entryTimeTableList);
+        //        }
 
         [HttpGet]
         public IActionResult Create()
@@ -40,11 +38,11 @@ namespace EmployeeTimeEntryWith3Tier.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create( EntryTime model)
+        public IActionResult Create(EntryTime model)
         {
             if (ModelState.IsValid)
             {
-                _entryBl.Create( model);
+                _entryBl.Create(model);
                 return RedirectToAction("Index", "Home");
                 //string userId = User.Claims.FirstOrDefault(
                 //    c => c.Type == ClaimTypes.NameIdentifier).Value;
@@ -71,7 +69,7 @@ namespace EmployeeTimeEntryWith3Tier.Controllers
             {
                 _entryBl.CreateUser(user);
                 return RedirectToAction("Index", "Home");
-                
+
             }
 
             return View(user);
@@ -98,7 +96,7 @@ namespace EmployeeTimeEntryWith3Tier.Controllers
 
         public IActionResult GetEmployee()
         {
-           IEnumerable<EmployeeViewModel> result = _entryBl.GetEmployee();
+            IEnumerable<EmployeeViewModel> result = _entryBl.GetEmployee();
             return View(result);
         }
 

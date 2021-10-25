@@ -172,9 +172,6 @@
             "projectReferences": {
               "D:\\gislen\\asp.netMvcCore\\sep23\\BusinessLayer\\BusinessLayer.csproj": {
                 "projectPath": "D:\\gislen\\asp.netMvcCore\\sep23\\BusinessLayer\\BusinessLayer.csproj"
-              },
-              "D:\\gislen\\asp.netMvcCore\\sep23\\DataAccessLayer\\DataAccessLayer.csproj": {
-                "projectPath": "D:\\gislen\\asp.netMvcCore\\sep23\\DataAccessLayer\\DataAccessLayer.csproj"
               }
             }
           }

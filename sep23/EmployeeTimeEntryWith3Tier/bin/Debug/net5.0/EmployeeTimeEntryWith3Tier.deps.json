@@ -34,7 +34,6 @@
       "EmployeeTimeEntryWith3Tier/1.0.0": {
         "dependencies": {
           "BusinessLayer": "1.0.0",
-          "DataAccessLayer": "1.0.0",
           "Microsoft.EntityFrameworkCore.Design": "5.0.11",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.11",
           "Microsoft.AspNetCore.Antiforgery": "5.0.0.0",

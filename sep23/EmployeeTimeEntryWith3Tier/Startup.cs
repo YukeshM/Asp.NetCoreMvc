@@ -30,11 +30,11 @@ namespace EmployeeTimeEntryWith3Tier
             //  .AddEntityFrameworkStores<sep23WithDbFirstContext>();
 
             //services.AddScoped<AccountBl>();
-            services.AddScoped<AdministrationBl>();
-            services.AddScoped<EntryBl>();
+            //services.AddScoped<AdministrationBl>();
+            //services.AddScoped<EntryBl>();
 
-            //services.AddScoped<AccountDl>();
-            services.AddScoped<AdministrationDl>();
+            ////services.AddScoped<AccountDl>();
+            //services.AddScoped<AdministrationDl>();
             services.AddScoped<EntryDl>();
         }
 
