@@ -1,0 +1,21 @@
+
+ul{
+  position: fixed;
+  margin-top: -8px;
+  float: left;
+  background-color: #e76f51;
+  height: 100%;
+  /* width: 15%; */
+}
+
+ul a{
+  text-decoration: none;
+  margin: 0px;
+  color: white;
+  font-weight: bold;
+}
+li{
+  margin-left: 0px;
+  padding: 0px 10px;
+  list-style: none;
+}

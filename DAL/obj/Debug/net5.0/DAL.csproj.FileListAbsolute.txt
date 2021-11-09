@@ -1,0 +1,15 @@
+D:\gislen\asp.netMvcCore\DAL\bin\Debug\net5.0\DAL.deps.json
+D:\gislen\asp.netMvcCore\DAL\bin\Debug\net5.0\DAL.runtimeconfig.json
+D:\gislen\asp.netMvcCore\DAL\bin\Debug\net5.0\DAL.runtimeconfig.dev.json
+D:\gislen\asp.netMvcCore\DAL\bin\Debug\net5.0\DAL.dll
+D:\gislen\asp.netMvcCore\DAL\bin\Debug\net5.0\ref\DAL.dll
+D:\gislen\asp.netMvcCore\DAL\bin\Debug\net5.0\DAL.pdb
+D:\gislen\asp.netMvcCore\DAL\obj\Debug\net5.0\DAL.csproj.AssemblyReference.cache
+D:\gislen\asp.netMvcCore\DAL\obj\Debug\net5.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\gislen\asp.netMvcCore\DAL\obj\Debug\net5.0\DAL.AssemblyInfoInputs.cache
+D:\gislen\asp.netMvcCore\DAL\obj\Debug\net5.0\DAL.AssemblyInfo.cs
+D:\gislen\asp.netMvcCore\DAL\obj\Debug\net5.0\DAL.csproj.CoreCompileInputs.cache
+D:\gislen\asp.netMvcCore\DAL\obj\Debug\net5.0\DAL.dll
+D:\gislen\asp.netMvcCore\DAL\obj\Debug\net5.0\ref\DAL.dll
+D:\gislen\asp.netMvcCore\DAL\obj\Debug\net5.0\DAL.pdb
+D:\gislen\asp.netMvcCore\DAL\obj\Debug\net5.0\DAL.genruntimeconfig.cache

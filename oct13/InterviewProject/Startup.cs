@@ -1,16 +1,12 @@
+using BusinessLayer.Interface;
+using BusinessLayer.Method;
+using DataLayer.Interface;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace InterviewProject
 {
@@ -29,6 +25,15 @@ namespace InterviewProject
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddTransient<ICrudDAL>(option => new DataLayer.Method.CrudDAL("Server = TRAINEE-03; Database = oct13InterviewManagement; User Id = sa; Password = @9543890461My; Trusted_Connection = False; MultipleActiveResultSets = True;"));
+
+            services.AddScoped<ICrudBAL, CrudBAL>();
+
+            //cors
+            services.AddCors(options =>
+            {
+                options.AddPolicy("MyCorsImplementationPolicy", builder => builder.WithOrigins("*"));
+            });
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -43,14 +48,14 @@ namespace InterviewProject
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "InterviewProject v1"));
+                //app.UseSwagger();
+                //app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "InterviewProject v1"));
             }
 
             app.UseHttpsRedirection();
 
             app.UseRouting();
-
+            app.UseCors("MyCorsImplementationPolicy");
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

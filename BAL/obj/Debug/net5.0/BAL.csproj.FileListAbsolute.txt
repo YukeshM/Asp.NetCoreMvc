@@ -1,0 +1,14 @@
+D:\gislen\asp.netMvcCore\BAL\bin\Debug\net5.0\BAL.deps.json
+D:\gislen\asp.netMvcCore\BAL\bin\Debug\net5.0\BAL.dll
+D:\gislen\asp.netMvcCore\BAL\bin\Debug\net5.0\ref\BAL.dll
+D:\gislen\asp.netMvcCore\BAL\bin\Debug\net5.0\BAL.pdb
+D:\gislen\asp.netMvcCore\BAL\bin\Debug\net5.0\DAL.dll
+D:\gislen\asp.netMvcCore\BAL\bin\Debug\net5.0\DAL.pdb
+D:\gislen\asp.netMvcCore\BAL\obj\Debug\net5.0\BAL.csproj.AssemblyReference.cache
+D:\gislen\asp.netMvcCore\BAL\obj\Debug\net5.0\BAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\gislen\asp.netMvcCore\BAL\obj\Debug\net5.0\BAL.AssemblyInfoInputs.cache
+D:\gislen\asp.netMvcCore\BAL\obj\Debug\net5.0\BAL.AssemblyInfo.cs
+D:\gislen\asp.netMvcCore\BAL\obj\Debug\net5.0\BAL.csproj.CoreCompileInputs.cache
+D:\gislen\asp.netMvcCore\BAL\obj\Debug\net5.0\BAL.dll
+D:\gislen\asp.netMvcCore\BAL\obj\Debug\net5.0\ref\BAL.dll
+D:\gislen\asp.netMvcCore\BAL\obj\Debug\net5.0\BAL.pdb

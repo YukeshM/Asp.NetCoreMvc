@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "mSEXO3iniEEHReh8d1/5QkPotxercqElFRJla8kIHNc1mLbWPMu1Q4tQFBBxW2/CKjMU1MQslWczzAChQuqQPA==",
+  "dgSpecHash": "GqMghH7nrlctzu7l7Rj85Rq+DeqyO10OCQpQM57i6T2YQZy6CW7D54md1MZ8SBGvMEeWuAt/e06rlF1cpVdK3A==",
   "success": true,
   "projectFilePath": "D:\\gislen\\asp.netMvcCore\\oct13\\DataLayer\\DataLayer.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\yukeshm\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\yukeshm\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\yukeshm\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\yukeshm\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

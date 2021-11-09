@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "iwO8P78G7WL3aL6nRmST3mwiSqzPbzxrTc8qJTB0knO/Fz4larrJ8Fa6KCWPw99mAZPvUloAk8dq0dcgla49/g==",
+  "dgSpecHash": "aZ3zP2V87tF6xThioBcgQ6enTVb5mN4PTW6N41AZcSWVeKCSd2kL9tfM1Uij5rSSaAD2cNA9PEkICbum6d1e9w==",
   "success": true,
   "projectFilePath": "D:\\gislen\\asp.netMvcCore\\oct13\\BusinessLayer\\BusinessLayer.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\yukeshm\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\yukeshm\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\yukeshm\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
     "C:\\Users\\yukeshm\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.0.1\\microsoft.data.sqlclient.sni.runtime.2.0.1.nupkg.sha512",

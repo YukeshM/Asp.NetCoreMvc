@@ -1,0 +1,99 @@
+<form
+  [formGroup]="createCandidateForm"
+  (ngSubmit)="CreateCandidate()"
+  action=""
+>
+  <div class="row">
+    <div class="col-4">
+      <div class="form-group">
+        <label for="referredBy">Reffered By</label>
+        <input
+          type="text"
+          class="form-control"
+          id="refferedBy"
+          placeholder="Reffered By"
+          required
+          formControlName="ReferredBy"
+        />
+      </div>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          placeholder="Enter your name here"
+          formControlName="Name"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="lastEmployee">Last Employee</label>
+        <input
+          type="text"
+          class="form-control"
+          id="lastEmployee"
+          placeholder="Enter where you worked last"
+          formControlName="LastEmployer"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="lastDesignation">Last Designation</label>
+        <input
+          type="text"
+          class="form-control"
+          id="lastDesignation"
+          placeholder="Enter your designation"
+          formControlName="LastDesignation"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="experience">Experience</label>
+        <input
+          type="text"
+          class="form-control"
+          id="experience"
+          placeholder="Enter your Experience"
+          formControlName="Experience"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="noticePeriod">Notice Period</label>
+        <input
+          type="text"
+          class="form-control"
+          id="noticePeriod"
+          placeholder="Enter your notice period in days like(10 days)"
+          formControlName="NoticePeriod"
+          required
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="source">Source</label>
+        <select
+          name=""
+          id="source"
+          formControlName="SourceId"
+          class="form-control"
+        >
+          <option disabled value="">Select source</option>
+          <option value=""><b>Choose Source</b></option>
+          <option *ngFor="let item of source">
+            {{ item.SourceName }}
+          </option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+  <button type="reset" class="btn btn-danger resetBtn">Reset</button>
+</form>

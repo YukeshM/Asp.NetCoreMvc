@@ -159,7 +159,8 @@ namespace DataAccessLayer.Method
                             employee.DateOfJoining,
                             employee.Aadhar,
                             employee.Pan,
-                            employee.GenderId
+                            employee.Gender
+                                                
                         }
                         );
                 }

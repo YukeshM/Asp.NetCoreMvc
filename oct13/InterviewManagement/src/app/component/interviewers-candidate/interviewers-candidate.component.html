@@ -1,0 +1,11 @@
+<div *ngFor="let item of candidateDetails; let i = index">
+  <div class="row">
+    <div>{{item.candidateId}}</div>
+    <div>{{item.referredBy}}</div>
+    <div>{{item.candidateName}}</div>
+    <div>{{item.lastEmployer}}</div>
+    <div>{{item.lastDesignation}}</div>
+    <button type="button" (click)="GetCandidateInfoById(item.candidateId)" routerLink="CandidateRoundInformationById" routerLinkActive="true">Get Detail</button>
+  </div>
+
+</div>
