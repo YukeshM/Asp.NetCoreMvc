@@ -27,7 +27,8 @@ namespace BusinessLayer.Method
                     LastDesignation = createCandidate.LastDesignation,
                     Experience = createCandidate.Experience,
                     NoticePeriod = createCandidate.NoticePeriod,
-                    SourceId = createCandidate.SourceId
+                    SourceId = createCandidate.SourceId,
+                    MedicalStatus = createCandidate.MedicalStatus
                 };
                 _crudDAL.Create(model);
             }
@@ -59,103 +60,151 @@ namespace BusinessLayer.Method
             }
         }
 
-        public void CreateSoftSkill(CreateSoftskillForCandidateBAL createSoftskillForCandidate)
-        {
-            try
-            {
-                var model = new CreateSoftskillForCandidate()
-                {
-                    CandidateRoundInformationId = createSoftskillForCandidate.CandidateRoundInformationId,
-                    Aptitude = createSoftskillForCandidate.Aptitude,
-                    Attitude = createSoftskillForCandidate.Attitude,
-                    Initiative = createSoftskillForCandidate.Initiative,
-                    Leadership = createSoftskillForCandidate.Leadership,
-                    ListeningSkill = createSoftskillForCandidate.ListeningSkill,
-                    Verbal = createSoftskillForCandidate.Verbal,
-                    WillingnessToLearn = createSoftskillForCandidate.WillingnessToLearn,
-                    Written = createSoftskillForCandidate.Written,
-                    Other = createSoftskillForCandidate.Other
-                };
-                _crudDAL.CreateSoftSkill(model);
-
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
-
-        public void CreateTechnicalSkill(CreateTechnicalSkillForCandidateBAL createTechnicalSkillForCandidate)
-        {
-            try
-            {
-                var model = new CreateTechnicalSkillForCandidate()
-                {
-                    CandidateRoundInformationId = createTechnicalSkillForCandidate.CandidateRoundInformationId,
-                    AnalyticalSkill = createTechnicalSkillForCandidate.AnalyticalSkill,
-                    Concept = createTechnicalSkillForCandidate.Concept,
-                    Domain = createTechnicalSkillForCandidate.Domain,
-                    FocussedAndAlert = createTechnicalSkillForCandidate.FocussedAndAlert,
-                    Other = createTechnicalSkillForCandidate.Other,
-                    ProblemSolving = createTechnicalSkillForCandidate.ProblemSolving,
-                    SkillSet = createTechnicalSkillForCandidate.SkillSet,
-                    Technical = createTechnicalSkillForCandidate.Technical
-                };
-                _crudDAL.CreateTechnicalSkill(model);
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
-
         public IEnumerable<GetCandidateRoundBAL> Get()
         {
-            var candidateList = _crudDAL.Get().ToList();
-            var list = new List<GetCandidateRoundBAL>();
-            for (int i = 0; i < candidateList.Count; i++)
+            try
             {
-                GetCandidateRoundBAL getCandidateRoundBAL = new GetCandidateRoundBAL()
+                var candidateList = _crudDAL.Get().ToList();
+                var list = new List<GetCandidateRoundBAL>();
+                for (int i = 0; i < candidateList.Count; i++)
                 {
-                    CandidateId = candidateList[i].CandidateId,
-                    CandidateName = candidateList[i].CandidateName,
-                    CandidateStatus = candidateList[i].CandidateStatus,
-                    Experience = candidateList[i].Experience,
-                    InterviewDate = candidateList[i].InterviewDate,
-                    InterviewerName = candidateList[i].InterviewerName,
-                    LastDesignation = candidateList[i].LastDesignation,
-                    LastEmployer = candidateList[i].LastEmployer,
-                    NoticePeriod = candidateList[i].NoticePeriod,
-                    ReferredBy = candidateList[i].ReferredBy,
-                    RoundName = candidateList[i].RoundName,
-                    SourceName = candidateList[i].SourceName
-                };
-                list.Add(getCandidateRoundBAL);
+                    GetCandidateRoundBAL getCandidateRoundBAL = new GetCandidateRoundBAL()
+                    {
+                        CandidateId = candidateList[i].CandidateId,
+                        CandidateName = candidateList[i].CandidateName,
+                        CandidateStatus = candidateList[i].CandidateStatus,
+                        Experience = candidateList[i].Experience,
+                        InterviewDate = candidateList[i].InterviewDate,
+                        InterviewerName = candidateList[i].InterviewerName,
+                        LastDesignation = candidateList[i].LastDesignation,
+                        LastEmployer = candidateList[i].LastEmployer,
+                        NoticePeriod = candidateList[i].NoticePeriod,
+                        ReferredBy = candidateList[i].ReferredBy,
+                        RoundName = candidateList[i].RoundName,
+                        SourceName = candidateList[i].SourceName,
+                        MedicalStatus = candidateList[i].MedicalStatus
+                    };
+                    list.Add(getCandidateRoundBAL);
+                }
+                return list;
             }
-            return list;
+            catch (Exception)
+            {
+
+                throw;
+            }
+
         }
 
         public GetCandidateRoundBAL GetById(int id)
         {
-            var candidateRoundInfo = _crudDAL.GetById(id);
-            var candidateRoundDetail = new GetCandidateRoundBAL()
+            try
             {
-                CandidateId = candidateRoundInfo.CandidateId,
-                CandidateName = candidateRoundInfo.CandidateName,
-                ReferredBy = candidateRoundInfo.ReferredBy,
-                RoundName = candidateRoundInfo.RoundName,
-                LastEmployer = candidateRoundInfo.LastEmployer,
-                LastDesignation = candidateRoundInfo.LastDesignation,
-                Experience = candidateRoundInfo.Experience,
-                InterviewDate = candidateRoundInfo.InterviewDate,
-                InterviewerName = candidateRoundInfo.InterviewerName,
-                NoticePeriod = candidateRoundInfo.NoticePeriod,
-                CandidateStatus = candidateRoundInfo.CandidateStatus,
-                SourceName = candidateRoundInfo.SourceName
+                var candidateRoundInfo = _crudDAL.GetById(id);
+                var candidateRoundDetail = new GetCandidateRoundBAL()
+                {
+                    CandidateId = candidateRoundInfo.CandidateId,
+                    CandidateName = candidateRoundInfo.CandidateName,
+                    ReferredBy = candidateRoundInfo.ReferredBy,
+                    RoundName = candidateRoundInfo.RoundName,
+                    LastEmployer = candidateRoundInfo.LastEmployer,
+                    LastDesignation = candidateRoundInfo.LastDesignation,
+                    Experience = candidateRoundInfo.Experience,
+                    InterviewDate = candidateRoundInfo.InterviewDate,
+                    InterviewerName = candidateRoundInfo.InterviewerName,
+                    NoticePeriod = candidateRoundInfo.NoticePeriod,
+                    CandidateStatus = candidateRoundInfo.CandidateStatus,
+                    SourceName = candidateRoundInfo.SourceName
+                };
+                return candidateRoundDetail;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+
+        public IEnumerable<GetCandidateStatusBAL> GetCandidateStatus()
+        {
+            try
+            {
+                var detailsFromDb = _crudDAL.GetCandidateStatus().ToList();
+                var detailsForBAL = new List<GetCandidateStatusBAL>();
+                for (int i = 0; i < detailsFromDb.Count; i++)
+                {
+                    var details = new GetCandidateStatusBAL()
+                    {
+                        CandidateStatusId = detailsFromDb[i].CandidateStatusId,
+                        Status = detailsFromDb[i].Status
+                    };
+
+                    detailsForBAL.Add(details);
+                }
+
+                return detailsForBAL;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+        }
+
+        public IEnumerable<GetRatingBAL> GetRating()
+        {
+            try
+            {
+                var detailsFromDb = _crudDAL.GetRating().ToList();
+                var detailsForBAL = new List<GetRatingBAL>();
+
+                for (int i = 0; i < detailsFromDb.Count; i++)
+                {
+                    var details = new GetRatingBAL()
+                    {
+                        RatingId = detailsFromDb[i].RatingId,
+                        RatingValue = detailsFromDb[i].RatingValue
+                    };
+                    detailsForBAL.Add(details);
+                }
+
+                return detailsForBAL;
+            }
+            catch (Exception)
+            {
+
+                throw;
             };
-            return candidateRoundDetail;
+        }
+
+        public IEnumerable<GetSourceBAL> GetSource()
+        {
+            try
+            {
+                var detailsFromDb = _crudDAL.GetSource().ToList();
+                var detailsForBAL = new List<GetSourceBAL>();
+
+                for (int i = 0; i < detailsFromDb.Count; i++)
+                {
+                    var details = new GetSourceBAL()
+                    {
+                        SourceId = detailsFromDb[i].SourceId,
+                        SourceName = detailsFromDb[i].SourceName
+                    };
+
+                    detailsForBAL.Add(details);
+                }
+
+                return detailsForBAL;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public void Update(UpdateRoundInfoByCandidateIdBAL updateRoundInfoByCandidateId)

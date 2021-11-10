@@ -13,7 +13,6 @@ namespace InterviewProject.Controllers
 {
     [Route("api/[controller]/[action]")]
     [ApiController]
-    [EnableCors("MyCorsImplementationPolicy")]
 
     public class InterviewManagementController : ControllerBase
     {
@@ -48,29 +47,7 @@ namespace InterviewProject.Controllers
                 return Ok();
             }
             return BadRequest(createInterviewerForTheCandidate);
-        }
-
-        [HttpPost]
-        public IActionResult CreateSoftSkill(CreateSoftskillForCandidateBAL createSoftskillForCandidate)
-        {
-            if (ModelState.IsValid)
-            {
-                _crudBAL.CreateSoftSkill(createSoftskillForCandidate);
-                return Ok();
-            }
-            return BadRequest(createSoftskillForCandidate);
-        }
-
-        [HttpPost]
-        public IActionResult CreateTechnicalSkill(CreateTechnicalSkillForCandidateBAL createTechnicalSkillForCandidate)
-        {
-            if (ModelState.IsValid)
-            {
-                _crudBAL.CreateTechnicalSkill(createTechnicalSkillForCandidate);
-                return Ok();
-            }
-            return BadRequest(createTechnicalSkillForCandidate);
-        }
+        }      
 
         [HttpGet]
         public IActionResult Get()
@@ -88,6 +65,27 @@ namespace InterviewProject.Controllers
                 return Ok(getCandidateDetail);
             }
             return BadRequest("No data available");
+        }
+
+        [HttpGet]
+        public IActionResult GetCandidateStatus()
+        {
+            IEnumerable<GetCandidateStatusBAL> getCandidateStatuses = _crudBAL.GetCandidateStatus();
+            return Ok(getCandidateStatuses);
+        }
+
+        [HttpGet]
+        public IActionResult GetSource()
+        {
+            IEnumerable<GetSourceBAL> getSources = _crudBAL.GetSource();
+            return Ok(getSources);
+        }
+
+        [HttpGet]
+        public IActionResult GetRating()
+        {
+            IEnumerable<GetRatingBAL> getRatings = _crudBAL.GetRating();
+            return Ok(getRatings);
         }
 
         [HttpPut]

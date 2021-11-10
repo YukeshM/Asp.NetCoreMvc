@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { CreateCandidate } from 'src/app/CustomModel/create-candidate';
+import { GetSource } from 'src/app/CustomModel/get-source';
 import { HumanResourceService } from 'src/app/service/human-resource.service';
 
 
@@ -11,13 +12,7 @@ import { HumanResourceService } from 'src/app/service/human-resource.service';
 })
 export class CandidateInfoComponent implements OnInit {
 
-  source = [
-    {SourceId : 1, SourceName : "LinkedIn" },
-    {SourceId : 2, SourceName : "Advertisement"},
-    {SourceId : 3, SourceName : "Facebook"},
-    {SourceId : 4, SourceName : "Google"},
-    {SourceId : 5, SourceName : "Others"}
-  ];
+  public source : GetSource[] = [];
 
 
   createCandidateForm : FormGroup = new FormGroup({
@@ -27,7 +22,8 @@ export class CandidateInfoComponent implements OnInit {
     LastDesignation : new FormControl(),
     NoticePeriod : new FormControl(),
     Experience : new FormControl(),
-    SourceId : new FormControl()
+    SourceId : new FormControl(),
+    MedicalStatus : new FormControl()
   });
 
   createCandidate : CreateCandidate = new CreateCandidate();
@@ -35,6 +31,10 @@ export class CandidateInfoComponent implements OnInit {
   constructor(private _humanResourceService : HumanResourceService) { }
 
   ngOnInit(): void {
+    this._humanResourceService.GetSource().
+    subscribe(
+      data => this.source = data
+    );
     // this.createCandidateForm = new FormGroup({
     // ReferredBy : new FormControl(),
     // Name : new FormControl(),
@@ -54,8 +54,9 @@ export class CandidateInfoComponent implements OnInit {
     this.createCandidate.LastDesignation = this.createCandidateForm.value.LastDesignation,
     this.createCandidate.Experience = this.createCandidateForm.value.Experience,
     this.createCandidate.NoticePeriod = this.createCandidateForm.value.NoticePeriod,
-    this.createCandidate.SourceId = this.createCandidateForm.value.SourceId
-    this._humanResourceService.Create(this.createCandidate);
+    this.createCandidate.SourceId = this.createCandidateForm.value.SourceId,
+    this.createCandidate.MedicalStatus = this.createCandidateForm.value.MedicalStatus
+    this._humanResourceService.Create(this.createCandidate).subscribe();
     //console.log(this.createCandidateForm.value);
   }
 }

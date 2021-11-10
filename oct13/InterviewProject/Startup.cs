@@ -28,17 +28,21 @@ namespace InterviewProject
             services.AddTransient<ICrudDAL>(option => new DataLayer.Method.CrudDAL("Server = TRAINEE-03; Database = oct13InterviewManagement; User Id = sa; Password = @9543890461My; Trusted_Connection = False; MultipleActiveResultSets = True;"));
 
             services.AddScoped<ICrudBAL, CrudBAL>();
-
-            //cors
-            services.AddCors(options =>
-            {
-                options.AddPolicy("MyCorsImplementationPolicy", builder => builder.WithOrigins("*"));
-            });
+            
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "InterviewProject", Version = "v1" });
+            });
+
+            //cors
+            services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                {
+                    builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                });
             });
         }
 
@@ -55,7 +59,8 @@ namespace InterviewProject
             app.UseHttpsRedirection();
 
             app.UseRouting();
-            app.UseCors("MyCorsImplementationPolicy");
+            //cors
+            app.UseCors();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

@@ -43,6 +43,10 @@ namespace BusinessLayer.CustomModel
             get; set;
         }
 
+        public string MedicalStatus
+        {
+            get; set;
+        }
         public string RoundName
         {
             get; set;

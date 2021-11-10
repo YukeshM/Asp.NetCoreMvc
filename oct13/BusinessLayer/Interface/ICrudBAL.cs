@@ -9,13 +9,18 @@ namespace BusinessLayer.Interface
 
         void CreateInterviewer(CreateInterviewerForTheCandidateBAL createInterviewerForTheCandidate);
 
-        void CreateSoftSkill(CreateSoftskillForCandidateBAL createSoftskillForCandidate);
-
-        void CreateTechnicalSkill(CreateTechnicalSkillForCandidateBAL createTechnicalSkillForCandidate);
+        
 
         IEnumerable<GetCandidateRoundBAL> Get();
 
         GetCandidateRoundBAL GetById(int id);
+
+        IEnumerable<GetCandidateStatusBAL> GetCandidateStatus();
+
+        IEnumerable<GetRatingBAL> GetRating();
+
+        IEnumerable<GetSourceBAL> GetSource();
+
 
 
         void Update(UpdateRoundInfoByCandidateIdBAL updateRoundInfoByCandidateId);

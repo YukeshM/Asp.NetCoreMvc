@@ -6,4 +6,5 @@ export class CreateCandidate{
   Experience : number = 0;
   NoticePeriod : string = '';
   SourceId : number = 0 ;
+  MedicalStatus : string = '';
 }

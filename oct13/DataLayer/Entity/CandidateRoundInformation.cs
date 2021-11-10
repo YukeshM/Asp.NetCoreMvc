@@ -9,8 +9,7 @@ namespace DataLayer.Entity
     {
         public CandidateRoundInformation()
         {
-            SoftSkills = new HashSet<SoftSkill>();
-            TechnicalSkills = new HashSet<TechnicalSkill>();
+            Reviews = new HashSet<Review>();
         }
 
         public int CandidateRoundInformationId { get; set; }
@@ -24,7 +23,6 @@ namespace DataLayer.Entity
         public virtual Interviewer Interviewer { get; set; }
         public virtual RoundInformation Round { get; set; }
         public virtual CandidateStatus Status { get; set; }
-        public virtual ICollection<SoftSkill> SoftSkills { get; set; }
-        public virtual ICollection<TechnicalSkill> TechnicalSkills { get; set; }
+        public virtual ICollection<Review> Reviews { get; set; }
     }
 }

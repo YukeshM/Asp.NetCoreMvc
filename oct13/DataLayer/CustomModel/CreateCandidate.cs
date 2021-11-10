@@ -43,5 +43,10 @@ namespace DataLayer.CustomModel
             get; set;
         }
 
+        public string MedicalStatus
+        {
+            get; set;
+        }
+
     }
 }

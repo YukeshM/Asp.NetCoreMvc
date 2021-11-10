@@ -13,13 +13,17 @@ namespace DataLayer.Interface
 
         void CreateInterviewer(CreateInterviewerForTheCandidate createInterviewerForTheCandidate);
 
-        void CreateSoftSkill(CreateSoftskillForCandidate createSoftskillForCandidate);
-
-        void CreateTechnicalSkill(CreateTechnicalSkillForCandidate createTechnicalSkillForCandidate);
+        
 
         IEnumerable<GetCandidateRound> Get();
 
         GetCandidateRound GetById(int id);
+
+        IEnumerable<GetCandidateStatus> GetCandidateStatus();
+
+        IEnumerable<GetRating> GetRating();
+
+        IEnumerable<GetSource> GetSource();
 
 
         void Update(UpdateRoundInfoByCandidateId updateRoundInfoByCandidateId);

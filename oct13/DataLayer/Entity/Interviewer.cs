@@ -15,9 +15,6 @@ namespace DataLayer.Entity
         public int InterviewerId { get; set; }
         public string Name { get; set; }
         public bool InterviewerSign { get; set; }
-        public string Pros { get; set; }
-        public string Cons { get; set; }
-        public string InterviewerComment { get; set; }
 
         public virtual ICollection<CandidateRoundInformation> CandidateRoundInformations { get; set; }
     }

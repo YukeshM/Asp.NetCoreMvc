@@ -84,12 +84,22 @@
           formControlName="SourceId"
           class="form-control"
         >
-          <option disabled value="">Select source</option>
-          <option value=""><b>Choose Source</b></option>
-          <option *ngFor="let item of source">
-            {{ item.SourceName }}
+          <option *ngFor="let item of source" value="{{item.sourceId}}">
+            {{ item.sourceName }}
           </option>
         </select>
+      </div>
+
+      <div class="form-group">
+        <label for="medicalStatus">Medical Status</label>
+        <input
+          type="text"
+          class="form-control"
+          id="medicalStatus"
+          placeholder="Enter your medical status"
+          formControlName="MedicalStatus"
+          required
+        />
       </div>
     </div>
   </div>

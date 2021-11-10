@@ -1,1 +1,115 @@
-<p>create-soft-skill works!</p>
+<h3>Enter Soft skill details.</h3>
+<form action="">
+  <div class="row">
+    <div class="col-6">
+      <div class="form-group">
+        <label for="candidateRoundInformation"
+          >Candidate Round Information</label
+        >
+        <select name="" id="" class="form-control">
+          <option value="">Choose Round Information</option>
+          <option value="" *ngFor="let item of roundInformation">
+            {{ item.RoundName }}
+          </option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="written">Written</label>
+        <select name="" id="" class="form-control">
+          <option value="">Choose Rating</option>
+          <option value="" *ngFor="let item of Rating">
+            {{ item.RatingValue }}
+          </option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="verbal">Verbal</label>
+        <select name="" id="" class="form-control">
+          <option value="">Choose Rating</option>
+          <option value="" *ngFor="let item of Rating">
+            {{ item.RatingValue }}
+          </option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="aptitude">Aptitude</label>
+        <select name="" id="" class="form-control">
+          <option value="">Choose Rating</option>
+          <option value="" *ngFor="let item of Rating">
+            {{ item.RatingValue }}
+          </option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="leaderShip">Leader ship</label>
+        <select name="" id="" class="form-control">
+          <option value="">Choose Rating</option>
+          <option value="" *ngFor="let item of Rating">
+            {{ item.RatingValue }}
+          </option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="initiative">Initiative</label>
+        <select name="" id="" class="form-control">
+          <option value="">Choose Rating</option>
+          <option value="" *ngFor="let item of Rating">
+            {{ item.RatingValue }}
+          </option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="willingnessToLearn">Willingness to learn</label>
+        <select name="" id="" class="form-control">
+          <option value="">Choose Rating</option>
+          <option value="" *ngFor="let item of Rating">
+            {{ item.RatingValue }}
+          </option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="attitude">Attitude</label>
+        <select name="" id="" class="form-control">
+          <option value="">Choose Rating</option>
+          <option value="" *ngFor="let item of Rating">
+            {{ item.RatingValue }}
+          </option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="listeningSkill">Listening skill</label>
+        <select name="" id="" class="form-control">
+          <option value="">Choose Rating</option>
+          <option value="" *ngFor="let item of Rating">
+            {{ item.RatingValue }}
+          </option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="other">Other</label>
+        <select name="" id="" class="form-control">
+          <option value="">Choose Rating</option>
+          <option value="" *ngFor="let item of Rating">
+            {{ item.RatingValue }}
+          </option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="">Comments</label>
+        <textarea type="text" name="" id="" cols="30" rows="10" class="form-control" placeholder="Enter your comments here"></textarea>
+      </div>
+
+      <a type="button" class="btn btn-primary" routerLink="CreateTechnicalSkill" routerLinkActive="active">Submit soft skill</a>
+    </div>
+  </div>
+</form>

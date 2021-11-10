@@ -29,18 +29,19 @@ namespace DataLayer.Method
                     sqlConnection.Execute("spCreateCandidate",
                         new
                         {
-                            @ReferredBy = createCandidate.ReferredBy ,
+                            @ReferredBy = createCandidate.ReferredBy,
                             @Name = createCandidate.Name,
                             @LastEmployer = createCandidate.LastEmployer,
                             @LastDesignation = createCandidate.LastDesignation,
                             @Experience = createCandidate.Experience,
                             @NoticePeriod = createCandidate.NoticePeriod,
-                            @SourceId = createCandidate.SourceId
+                            @SourceId = createCandidate.SourceId,
+                            @MedicalStatus = createCandidate.MedicalStatus
                         }, commandType: CommandType.StoredProcedure);
                 }
 
             }
-            catch(Exception)
+            catch (Exception)
             {
                 throw;
             }
@@ -73,69 +74,7 @@ namespace DataLayer.Method
             }
         }
 
-        public void CreateSoftSkill(CreateSoftskillForCandidate createSoftskillForCandidate)
-        {
-            try
-            {
-                using (var sqlConnection = new SqlConnection(_connectionString))
-                {
-                    sqlConnection.Open();
 
-                    sqlConnection.Execute("spSoftSkillForCandidate",
-                        new
-                        {
-                            @CandidateRoundInformationId = createSoftskillForCandidate.CandidateRoundInformationId,
-                            @Written = createSoftskillForCandidate.Written,
-                            @Verbal = createSoftskillForCandidate.Verbal,
-                            @Aptitude = createSoftskillForCandidate.Aptitude,
-                            @Leadership = createSoftskillForCandidate.Leadership,
-                            @Initiative = createSoftskillForCandidate.Initiative,
-                            @WillingnessToLearn = createSoftskillForCandidate.WillingnessToLearn,
-                            @Attitude = createSoftskillForCandidate.Attitude,
-                            @ListeningSkill = createSoftskillForCandidate.ListeningSkill,
-                            @Other = createSoftskillForCandidate.Other
-                        },commandType: CommandType.StoredProcedure
-
-                        );
-                }
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
-
-        public void CreateTechnicalSkill(CreateTechnicalSkillForCandidate createTechnicalSkillForCandidate)
-        {
-            try
-            {
-                using (var sqlConnection = new SqlConnection(_connectionString))
-                {
-                    sqlConnection.Open();
-
-                    sqlConnection.Execute("spTechnicalSkillForCandidate",
-                        new
-                        {
-                            @CandidateRoundInformationId = createTechnicalSkillForCandidate.CandidateRoundInformationId,
-                            @Concept = createTechnicalSkillForCandidate.Concept,
-                            @Technical = createTechnicalSkillForCandidate.Technical,
-                            @Domain = createTechnicalSkillForCandidate.Domain,
-                            @SkillSet = createTechnicalSkillForCandidate.SkillSet,
-                            @AnalyticalSkill = createTechnicalSkillForCandidate.AnalyticalSkill,
-                            @ProblemSolving = createTechnicalSkillForCandidate.ProblemSolving,
-                            @FocussedAndAlert = createTechnicalSkillForCandidate.FocussedAndAlert,
-                            @Other = createTechnicalSkillForCandidate.Other
-                        }, commandType: CommandType.StoredProcedure
-                        );
-                }
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
 
         public IEnumerable<GetCandidateRound> Get()
         {
@@ -168,16 +107,74 @@ namespace DataLayer.Method
                     {
                         @Id = id
                     }, commandType: CommandType.StoredProcedure
-                    ).FirstOrDefault();            
-               
+                    ).FirstOrDefault();
+
                 return candidateList;
             }
-            
+
+        }
+
+        public IEnumerable<GetCandidateStatus> GetCandidateStatus()
+        {
+            try
+            {
+                using (var sqlConnection = new SqlConnection(_connectionString))
+                {
+                    sqlConnection.Open();
+
+                    IEnumerable<GetCandidateStatus> getCandidateStatuses = sqlConnection.Query<GetCandidateStatus>("spGetCandidateStatus", commandType: CommandType.StoredProcedure);
+
+                    return getCandidateStatuses;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public IEnumerable<GetRating> GetRating()
+        {
+            try
+            {
+                using (var sqlConnection = new SqlConnection(_connectionString))
+                {
+                    sqlConnection.Open();
+
+                    IEnumerable<GetRating> getRatings = sqlConnection.Query<GetRating>("spGetRating", commandType: CommandType.StoredProcedure);
+
+                    return getRatings;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public IEnumerable<GetSource> GetSource()
+        {
+            try
+            {
+                using (var sqlConnection = new SqlConnection(_connectionString))
+                {
+                    IEnumerable<GetSource> getSources = sqlConnection.Query<GetSource>("spGetSource", commandType: CommandType.StoredProcedure);
+
+                    return getSources;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public void Update(UpdateRoundInfoByCandidateId updateRoundInfoByCandidateId)
         {
-            
+
 
             try
             {
