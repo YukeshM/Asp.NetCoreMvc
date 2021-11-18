@@ -25,7 +25,7 @@ namespace InterviewProject.Controllers
         }
 
 
-        
+
         [HttpPost]
         public IActionResult Create(CreateCandidateBAL createCandidate)
         {
@@ -47,7 +47,7 @@ namespace InterviewProject.Controllers
                 return Ok();
             }
             return BadRequest(createInterviewerForTheCandidate);
-        }      
+        }
 
         [HttpGet]
         public IActionResult Get()
@@ -88,6 +88,27 @@ namespace InterviewProject.Controllers
             return Ok(getRatings);
         }
 
+        [HttpGet]
+        public IActionResult GetSkill()
+        {
+            IEnumerable<GetSkillBAL> getSkills = _crudBAL.GetSkill();
+            return Ok(getSkills);
+        }
+
+        [HttpGet]
+        public IActionResult GetRound()
+        {
+            IEnumerable<GetRoundBAL> getRounds = _crudBAL.GetRound();
+            return Ok(getRounds);
+        }
+
+        [HttpGet]
+        public IActionResult GetInterviewer()
+        {
+            IEnumerable<GetInterviewerBAL> getInterviewerBAL = _crudBAL.GetInterviewer();
+            return Ok(getInterviewerBAL);
+        }
+
         [HttpPut]
         public IActionResult Update(UpdateRoundInfoByCandidateIdBAL updateRoundInfoByCandidateId)
         {
@@ -97,6 +118,17 @@ namespace InterviewProject.Controllers
                 return Ok();
             }
             return BadRequest(updateRoundInfoByCandidateId);
+        }
+
+        [HttpPut]
+        public IActionResult UpdateCandidateRoundInformation(UpdateCandidateRoundInformationBAL updateCandidateRoundInformationBAL)
+        {
+            if (ModelState.IsValid)
+            {
+                _crudBAL.UpdateCanidateRoundInformation(updateCandidateRoundInformationBAL);
+                return Ok();
+            }
+            return BadRequest(updateCandidateRoundInformationBAL);
         }
     }
 }

@@ -1,20 +1,43 @@
 <div *ngFor="let item of candidateDetails; let i = index">
   <div class="row">
-    <div>{{ item.candidateId }}</div>
-    <div>{{ item.referredBy }}</div>
-    <div>{{ item.candidateName }}</div>
-    <div>{{ item.lastEmployer }}</div>
-    <div>{{ item.lastDesignation }}</div>
-  </div>
-  <button
-    type="button"
-    (click)="GetCandidateInfoById(item.candidateId)"
-    routerLink="CandidateRoundInformationById"
-    routerLinkActive="true"
-    class="btn btn-info"
-  >
-    Get Detail
-  </button>
-</div>
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-6">
+              <p><strong>Referred By:</strong> {{ item.referredBy }}</p>
+              <p><b>Candidate Name:</b> {{ item.candidateName }}</p>
+              <p><b>Experience:</b> {{ item.experience }}</p>
+              <p><b>Last Employer:</b> {{ item.lastEmployer }}</p>
+              <p><b>Last Designation:</b> {{ item.lastDesignation }}</p>
+            </div>
 
-<!-- <app-get-candidate></app-get-candidate>    -->
+            <div class="col-md-6">
+              <p>
+                <b>Round Name:</b>
+                {{ item.roundName }}
+              </p>
+              <p><b>Interview Date:</b> {{ item.interviewDate | date }}</p>
+              <p><b>Interviewer Name:</b> {{ item.interviewerName }}</p>
+              <p><b>Round Status:</b> {{ item.candidateStatus }}</p>
+              <p><b>Notice Period:</b> {{ item.noticePeriod }}</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <button
+                type="button"
+                (click)="GetCandidateInfoById(item.candidateId, 'CandidateRoundInformationById')"
+                class="btn btn-info"
+              >
+                Get Detail
+              </button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

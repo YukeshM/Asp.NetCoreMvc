@@ -15,8 +15,9 @@ import{HttpClientModule} from '@angular/common/http';
 import { GetCandidateComponent } from './component/get-candidate/get-candidate.component'
 import { ReactiveFormsModule } from '@angular/forms';
 import { InterviewersCandidateComponent } from './component/interviewers-candidate/interviewers-candidate.component';
-import { CreateSoftSkillComponent } from './component/create-soft-skill/create-soft-skill.component';
-import { CreateTechnicalSkillComponent } from './component/create-technical-skill/create-technical-skill.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { UpdateCandidateComponent } from './component/update-candidate/update-candidate.component';
+
 
 
 @NgModule({
@@ -31,14 +32,14 @@ import { CreateTechnicalSkillComponent } from './component/create-technical-skil
     InterviewerFeedbackComponent,
     GetCandidateComponent,
     InterviewersCandidateComponent,
-    CreateSoftSkillComponent,
-    CreateTechnicalSkillComponent
+    UpdateCandidateComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

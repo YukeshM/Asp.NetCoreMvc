@@ -1,0 +1,243 @@
+<form
+  [formGroup]="createCandidateForm"
+  (ngSubmit)="UpdateCandidate()"
+  action=""
+>
+  <div class="row">
+    <div class="col-4">
+      <div
+        class="form-group"
+        [ngClass]="{ 'has-error': formErrors.ReferredBy }"
+      >
+        <label for="ReferredBy">Referred By</label>
+        <div>
+          <input
+            type="text"
+            class="form-control"
+            id="ReferredBy"
+            placeholder="Referred By"
+            required
+            formControlName="ReferredBy"
+            (blur)="logValidationErrors()"
+          />
+          <span class="text-danger" *ngIf="formErrors.ReferredBy"
+            >{{ formErrors.ReferredBy }}
+          </span>
+        </div>
+      </div>
+
+      <div class="form-group" [ngClass]="{ 'has-error': formErrors.Name }">
+        <label for="name">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="name"
+          placeholder="Enter your name here"
+          formControlName="Name"
+          required
+          (blur)="logValidationErrors()"
+        />
+        <span class="text-danger" *ngIf="formErrors.Name"
+          >{{ formErrors.Name }}
+        </span>
+      </div>
+
+      <div
+        class="form-group"
+        [ngClass]="{ 'has-error': formErrors.LastEmployer }"
+      >
+        <label for="lastEmployee">Last Employee</label>
+        <input
+          type="text"
+          class="form-control"
+          id="lastEmployee"
+          placeholder="Enter where you worked last"
+          formControlName="LastEmployer"
+          required
+          (blur)="logValidationErrors()"
+        />
+        <span class="text-danger" *ngIf="formErrors.LastEmployer"
+          >{{ formErrors.LastEmployer }}
+        </span>
+      </div>
+
+      <div
+        class="form-group"
+        [ngClass]="{ 'has-error': formErrors.LastDesignation }"
+      >
+        <label for="lastDesignation">Last Designation</label>
+        <input
+          type="text"
+          class="form-control"
+          id="lastDesignation"
+          placeholder="Enter your designation"
+          formControlName="LastDesignation"
+          required
+          (blur)="logValidationErrors()"
+        />
+        <span class="text-danger" *ngIf="formErrors.LastDesignation"
+          >{{ formErrors.LastDesignation }}
+        </span>
+      </div>
+
+      <div
+        class="form-group"
+        [ngClass]="{ 'has-error': formErrors.Experience }"
+      >
+        <label for="experience">Experience</label>
+        <input
+          type="number"
+          min="0"
+          max="25"
+          class="form-control"
+          id="experience"
+          placeholder="Enter your Experience"
+          formControlName="Experience"
+          required
+          (blur)="logValidationErrors()"
+        />
+        <span class="text-danger" *ngIf="formErrors.Experience"
+          >{{ formErrors.Experience }}
+        </span>
+      </div>
+
+      <div
+        class="form-group"
+        [ngClass]="{ 'has-error': formErrors.NoticePeriod }"
+      >
+        <label for="noticePeriod">Notice Period</label>
+        <input
+          type="text"
+          class="form-control"
+          id="noticePeriod"
+          placeholder="Enter your notice period in days like(10 days)"
+          formControlName="NoticePeriod"
+          required
+          (blur)="logValidationErrors()"
+        />
+        <span class="text-danger" *ngIf="formErrors.NoticePeriod"
+          >{{ formErrors.NoticePeriod }}
+        </span>
+      </div>
+
+      <div class="form-group" [ngClass]="{ 'has-error': formErrors.SourceId }">
+        <label for="source">Source</label>
+        <select name="" id="" formControlName="SourceId" class="form-select">
+          <option
+            value="{{ item.sourceId }}"
+            *ngFor="let item of source"
+            (blur)="logValidationErrors()"
+          >
+            {{ item.sourceName }}
+          </option>
+        </select>
+        <span class="text-danger" *ngIf="formErrors.SourceId"
+          >{{ formErrors.SourceId }}
+        </span>
+      </div>
+
+      <div
+        class="form-group"
+        [ngClass]="{ 'has-error': formErrors.MedicalStatus }"
+      >
+        <label for="medicalStatus">Medical Status</label>
+        <input
+          type="text"
+          class="form-control"
+          id="medicalStatus"
+          placeholder="Enter your medical status"
+          formControlName="MedicalStatus"
+          required
+          (blur)="logValidationErrors()"
+          value="{{ candidateInfoById.medicalStatus }}"
+        />
+        <span class="text-danger" *ngIf="formErrors.MedicalStatus"
+          >{{ formErrors.MedicalStatus }}
+        </span>
+      </div>
+
+      <div class="form-group" [ngClass]="{ 'has-error': formErrors.RoundName }">
+        <label for="candidateRound">Candidate Round</label>
+        <select name="" id="" class="form-select">
+          <option
+            value="{{ item.roundInformationId }}"
+            *ngFor="let item of round"
+            (blur)="logValidationErrors()"
+          >
+            {{ item.roundName }}
+          </option>
+        </select>
+        <span class="text-danger" *ngIf="formErrors.RoundName"
+          >{{ formErrors.RoundName }}
+        </span>
+      </div>
+
+      <div
+        class="form-group"
+        [ngClass]="{ 'has-error': formErrors.InterviewerName }"
+      >
+        <label for="interviewerName">Interviewer Name</label>
+        <select name="" id="" class="form-select">
+          <option
+            value="{{ item.interviewerId }}"
+            *ngFor="let item of interviewer"
+            (blur)="logValidationErrors()"
+          >
+            {{ item.name }}
+          </option>
+        </select>
+        <span class="text-danger" *ngIf="formErrors.InterviewerName"
+          >{{ formErrors.InterviewerName }}
+        </span>
+      </div>
+
+      <div
+        class="form-group"
+        [ngClass]="{ 'has-error': formErrors.InterviewDate }"
+      >
+        <label for="interviewDate">Interview Date</label>
+        <input
+          class="form-control"
+          type="datetime-local"
+          id="interviewDate"
+          placeholder="Select interview Date"
+          required
+          (blur)="logValidationErrors()"
+          value="{{ candidateInfoById.interviewDate }}"
+        />
+        <span class="text-danger" *ngIf="formErrors.InterviewDate"
+          >{{ formErrors.InterviewDate }}
+        </span>
+      </div>
+
+      <div
+        class="form-group"
+        [ngClass]="{ 'has-error': formErrors.CandidateStatus }"
+      >
+        <label for="status">Status</label>
+        <select name="" id="" class="form-select">
+          <option
+            value="{{ item.candidateStatusId }}"
+            *ngFor="let item of status"
+            (blur)="logValidationErrors()"
+          >
+            {{ item.status }}
+          </option>
+        </select>
+        <span class="text-danger" *ngIf="formErrors.CandidateStatus"
+          >{{ formErrors.CandidateStatus }}
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+  <button
+    type="button"
+    class="btn btn-danger"
+    (click)="goToPage('CandidateRoundInformation')"
+  >
+    Cancel
+  </button>
+</form>

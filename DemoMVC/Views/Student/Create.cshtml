@@ -1,0 +1,119 @@
+﻿@model DemoMVC.Models.Student
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+<form method="post" asp-action="Create">
+    <div class="form-group">
+        <label for="StudentName">Name</label>
+        <input type="text" for="StudentName" class="form-control " autocomplete="off" id="name" placeholder="Enter student name" />
+        <span class="text-danger" id="nameCheck">Name is required</span>
+    </div>
+
+    <div class="form-group">
+        <label for="Age">Age</label>
+        <input type="number" for="Age" class="form-control" autocomplete="off" min="1" max="110" id="age" placeholder="Enter student age" />
+        <span class="text-danger" id="ageCheck">Age is required</span>
+    </div>
+
+
+
+    <button type="button" class="btn btn-primary" id="btnSubmit">Submit</button>
+</form>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        //validate student name
+        $("#nameCheck").hide();
+        let nameError = true;
+        $("#name").keyup(function () {
+            validateName()
+        });
+
+        function validateName() {
+            let studentName = document.getElementById('name');
+
+            if (studentName.value == "") {
+                $("#nameCheck").show();
+                nameError = false;
+            }
+            else if ((studentName.value.length < 3) || (studentName.value.length > 30)) {
+                $("#nameCheck").show();
+                $("#nameCheck").html("length of the name should be between 3 and 30");
+                nameError = false;
+
+            }
+            else {
+                $("#nameCheck").hide();
+                nameError = true;
+            }
+        }
+
+        //for validating age
+        $("#ageCheck").hide();
+        let ageError = true;
+        $("#age").keyup(function () {
+            validateAge();
+        });
+
+        function validateAge() {
+            let age = document.getElementById("age").value;
+            if (age == "") {
+                $("#ageCheck").show();
+                ageError = false;
+            }
+            else if (age > 110) {
+                $("#ageCheck").show();
+                $("#ageCheck").html("Enter value between 1 and 110");
+                ageError = false;
+            }
+            else {
+                $("#ageCheck").hide();
+                ageError = true;
+            }
+        }
+
+
+
+        $("#btnSubmit").click(function () {
+            validateName(),
+            validateAge()
+            if (nameError == true && ageError == true) {
+                $.post("https://localhost:44302/Student/Create", {
+                    StudentName: $('#name').val(),
+                    Age: $('#age').val()
+                },
+                    function (data, status) {
+                        if (status == "success") {
+                            alert("You will be now redirected!")
+                            window.location = "https://localhost:44302/Student/Index";
+                            //$(location).prop('href',"https://localhost:44302/Student/Index");
+                        }
+
+                    });
+            }
+            else {
+                alert("Error Occured");
+            }
+
+
+
+        })
+        //for double operation
+        //$(".btn").on({
+        //    click: function () {
+        //        $(".gender").hide();
+        //    },
+        //    dblclick: function () {
+        //        $(".gender").show();
+        //    }
+        //})
+
+    });
+</script>

@@ -5,18 +5,28 @@
 >
   <div class="row">
     <div class="col-4">
-      <div class="form-group">
-        <label for="referredBy">Reffered By</label>
-        <input
-          type="text"
-          class="form-control"
-          id="refferedBy"
-          placeholder="Reffered By"
-          required
-          formControlName="ReferredBy"
-        />
+      <div
+        class="form-group"
+        [ngClass]="{ 'has-error': formErrors.ReferredBy }"
+      >
+        <label for="ReferredBy">Referred By</label>
+        <div>
+          <input
+            type="text"
+            class="form-control"
+            id="ReferredBy"
+            placeholder="Referred By"
+            required
+            formControlName="ReferredBy"
+            (blur)="logValidationErrors()"
+          />
+          <span class="text-danger" *ngIf="formErrors.ReferredBy"
+            >{{ formErrors.ReferredBy }}
+          </span>
+        </div>
       </div>
-      <div class="form-group">
+
+      <div class="form-group" [ngClass]="{ 'has-error': formErrors.Name }">
         <label for="name">Name</label>
         <input
           type="text"
@@ -25,10 +35,17 @@
           placeholder="Enter your name here"
           formControlName="Name"
           required
+          (blur)="logValidationErrors()"
         />
+        <span class="text-danger" *ngIf="formErrors.Name"
+          >{{ formErrors.Name }}
+        </span>
       </div>
 
-      <div class="form-group">
+      <div
+        class="form-group"
+        [ngClass]="{ 'has-error': formErrors.LastEmployer }"
+      >
         <label for="lastEmployee">Last Employee</label>
         <input
           type="text"
@@ -37,10 +54,17 @@
           placeholder="Enter where you worked last"
           formControlName="LastEmployer"
           required
+          (blur)="logValidationErrors()"
         />
+        <span class="text-danger" *ngIf="formErrors.LastEmployer"
+          >{{ formErrors.LastEmployer }}
+        </span>
       </div>
 
-      <div class="form-group">
+      <div
+        class="form-group"
+        [ngClass]="{ 'has-error': formErrors.LastDesignation }"
+      >
         <label for="lastDesignation">Last Designation</label>
         <input
           type="text"
@@ -49,22 +73,38 @@
           placeholder="Enter your designation"
           formControlName="LastDesignation"
           required
+          (blur)="logValidationErrors()"
         />
+        <span class="text-danger" *ngIf="formErrors.LastDesignation"
+          >{{ formErrors.LastDesignation }}
+        </span>
       </div>
 
-      <div class="form-group">
+      <div
+        class="form-group"
+        [ngClass]="{ 'has-error': formErrors.Experience }"
+      >
         <label for="experience">Experience</label>
         <input
-          type="text"
+          type="number"
+          min="0"
+          max="25"
           class="form-control"
           id="experience"
           placeholder="Enter your Experience"
           formControlName="Experience"
           required
+          (blur)="logValidationErrors()"
         />
+        <span class="text-danger" *ngIf="formErrors.Experience"
+          >{{ formErrors.Experience }}
+        </span>
       </div>
 
-      <div class="form-group">
+      <div
+        class="form-group"
+        [ngClass]="{ 'has-error': formErrors.NoticePeriod }"
+      >
         <label for="noticePeriod">Notice Period</label>
         <input
           type="text"
@@ -73,24 +113,33 @@
           placeholder="Enter your notice period in days like(10 days)"
           formControlName="NoticePeriod"
           required
+          (blur)="logValidationErrors()"
         />
+        <span class="text-danger" *ngIf="formErrors.NoticePeriod"
+          >{{ formErrors.NoticePeriod }}
+        </span>
       </div>
 
-      <div class="form-group">
+      <div class="form-group" [ngClass]="{ 'has-error': formErrors.SourceId }">
         <label for="source">Source</label>
-        <select
-          name=""
-          id="source"
-          formControlName="SourceId"
-          class="form-control"
-        >
-          <option *ngFor="let item of source" value="{{item.sourceId}}">
+        <select name="" id="" formControlName="SourceId" class="form-select">
+          <option
+            value="{{ item.sourceId }}"
+            *ngFor="let item of source"
+            (blur)="logValidationErrors()"
+          >
             {{ item.sourceName }}
           </option>
         </select>
+        <span class="text-danger" *ngIf="formErrors.SourceId"
+          >{{ formErrors.SourceId }}
+        </span>
       </div>
 
-      <div class="form-group">
+      <div
+        class="form-group"
+        [ngClass]="{ 'has-error': formErrors.MedicalStatus }"
+      >
         <label for="medicalStatus">Medical Status</label>
         <input
           type="text"
@@ -99,11 +148,22 @@
           placeholder="Enter your medical status"
           formControlName="MedicalStatus"
           required
+          (blur)="logValidationErrors()"
         />
+        <span class="text-danger" *ngIf="formErrors.MedicalStatus"
+          >{{ formErrors.MedicalStatus }}
+        </span>
       </div>
     </div>
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+
+  <button
+    type="submit"
+    class="btn btn-primary"
+    [disabled]="createCandidateForm.invalid"
+  >
+    Submit
+  </button>
 
   <button type="reset" class="btn btn-danger resetBtn">Reset</button>
 </form>

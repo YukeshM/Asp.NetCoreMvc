@@ -38,6 +38,11 @@ namespace BusinessLayer.CustomModel
             get; set;
         }
 
+        public int SourceId
+        {
+            get; set;
+        }
+
         public string SourceName
         {
             get; set;
@@ -47,6 +52,12 @@ namespace BusinessLayer.CustomModel
         {
             get; set;
         }
+
+        public int RoundInformationId
+        {
+            get; set;
+        }
+
         public string RoundName
         {
             get; set;
@@ -57,7 +68,17 @@ namespace BusinessLayer.CustomModel
             get; set;
         }
 
+        public int InterviewerId
+        {
+            get; set;
+        }
+
         public string InterviewerName
+        {
+            get; set;
+        }
+
+        public int CandidateStatusId
         {
             get; set;
         }

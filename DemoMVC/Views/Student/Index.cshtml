@@ -1,0 +1,82 @@
+﻿@model IEnumerable<DemoMVC.Models.Student>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Student Name</th>
+            <th>Age</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.StudentName
+                </td>
+                <td>
+                    @item.Age
+                </td>
+                <td>
+
+
+                    <button type="button" class="btn btn-primary" id="editBtn" value="@item.Id">
+                        Edit
+                    </button>
+                    <a class="btn btn-warning" id="deleteBtn" valueForDelete="@item.Id">Delete</a>
+                </td>
+                <td>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+
+
+</table>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+
+        //to get id for the edit button        
+
+        $("button").click(function () {
+            let editId = $(this).attr("value");
+            console.log(editId);
+            window.location = "/Student/Edit/" + editId;  
+        });
+
+        $("a").click(function () {
+            let deleteId = $(this).attr("valueForDelete");
+            console.log(deleteId);
+            $.ajax({
+                type: "POST",
+                url: "/Student/Delete/" + deleteId,
+                success: function () {
+                    alert("student deleted successfully.");
+                    window.location = "/Student/Index";
+                },
+                error: function () {
+                    alert("Unable to delete student!");
+                }
+            });
+
+        });
+
+    });
+
+</script>

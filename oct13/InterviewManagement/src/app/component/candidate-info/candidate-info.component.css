@@ -6,3 +6,7 @@ button{
 .resetBtn{
   margin-left: 30px;
 }
+
+.has-error label{
+  color: red;
+}

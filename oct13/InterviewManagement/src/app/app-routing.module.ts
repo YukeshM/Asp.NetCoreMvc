@@ -2,12 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CandidateInfoComponent } from './component/candidate-info/candidate-info.component';
 import { CandidateRoundInformationComponent } from './component/candidate-round-information/candidate-round-information.component';
-import { CreateSoftSkillComponent } from './component/create-soft-skill/create-soft-skill.component';
-import { CreateTechnicalSkillComponent } from './component/create-technical-skill/create-technical-skill.component';
 import { GetCandidateComponent } from './component/get-candidate/get-candidate.component';
 import { InterviewerCanditateDetailsComponent } from './component/interviewer-canditate-details/interviewer-canditate-details.component';
 import { InterviewerFeedbackComponent } from './component/interviewer-feedback/interviewer-feedback.component';
 import { InterviewersCandidateComponent } from './component/interviewers-candidate/interviewers-candidate.component';
+import { UpdateCandidateComponent } from './component/update-candidate/update-candidate.component';
 
 
 const routes: Routes = [
@@ -35,13 +34,10 @@ const routes: Routes = [
     component : InterviewersCandidateComponent
   },
   {
-    path: 'CreateSoftSkill',
-    component: CreateSoftSkillComponent
-  },
-  {
-    path: 'CreateTechnicalSkill',
-    component: CreateTechnicalSkillComponent
+    path: 'UpdateCandidate',
+    component: UpdateCandidateComponent
   }
+
 ];
 
 @NgModule({

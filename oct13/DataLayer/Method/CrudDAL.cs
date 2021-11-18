@@ -134,6 +134,25 @@ namespace DataLayer.Method
             }
         }
 
+        public IEnumerable<GetInterviewer> GetInterviewer()
+        {
+            try
+            {
+                using (var sqlConnection = new SqlConnection(_connectionString))
+                {
+                    sqlConnection.Open();
+                    IEnumerable<GetInterviewer> getInterviewers = sqlConnection.Query<GetInterviewer>("spInterviewer", commandType: CommandType.StoredProcedure).ToList();
+
+                    return getInterviewers;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public IEnumerable<GetRating> GetRating()
         {
             try
@@ -145,6 +164,44 @@ namespace DataLayer.Method
                     IEnumerable<GetRating> getRatings = sqlConnection.Query<GetRating>("spGetRating", commandType: CommandType.StoredProcedure);
 
                     return getRatings;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public IEnumerable<GetRound> GetRound()
+        {
+            try
+            {
+                using (var sqlConnection = new SqlConnection(_connectionString))
+                {
+                    sqlConnection.Open();
+                    IEnumerable<GetRound> getRounds = sqlConnection.Query<GetRound>("spGetRound", commandType: CommandType.StoredProcedure).ToList();
+
+                    return getRounds;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public IEnumerable<GetSkill> GetSkill()
+        {
+            try
+            {
+                using (var sqlConnection = new SqlConnection(_connectionString))
+                {
+                    sqlConnection.Open();
+                    IEnumerable<GetSkill> getSkills = sqlConnection.Query<GetSkill>("spGetSkill", commandType: CommandType.StoredProcedure).ToList();
+
+                    return getSkills;
                 }
             }
             catch (Exception)
@@ -193,6 +250,27 @@ namespace DataLayer.Method
                         },
                         commandType: CommandType.StoredProcedure
                         );
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public void UpdateCanidateRoundInformation(UpdateCandidateRoundInformation updateCandidateRoundInformation)
+        {
+            try
+            {
+                using (var sqlConnection = new SqlConnection(_connectionString))
+                {
+                    sqlConnection.Open();
+                    sqlConnection.Execute("",
+                        new
+                        {
+
+                        }, commandType: CommandType.StoredProcedure);
                 }
             }
             catch (Exception)

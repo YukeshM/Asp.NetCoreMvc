@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { GetCandidateRound } from 'src/app/CustomModel/get-candidate-round';
 import { HumanResourceService } from 'src/app/service/human-resource.service';
@@ -12,14 +13,17 @@ export class GetCandidateComponent implements OnInit {
 
   public candidateInfoById : GetCandidateRound = new GetCandidateRound();
 
-  constructor(private _humanResourceService : HumanResourceService) { }
+  constructor(private _humanResourceService : HumanResourceService,
+              private _router : Router) { }
 
   ngOnInit() {
+    console.warn(this._humanResourceService.id);
+    this._humanResourceService.GetCandidateById(this._humanResourceService.id)
+    .subscribe( data => this.candidateInfoById = data);
   }
 
-  GetCandidateInfoById(id: any){
-    return this._humanResourceService.GetCandidateById(id)
-    .subscribe( data => this.candidateInfoById = data)
+  gotopage(link : string){
+    this._router.navigateByUrl(link);
   }
   
 

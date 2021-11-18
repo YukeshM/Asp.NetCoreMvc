@@ -1,5 +1,52 @@
-<h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci ducimus deserunt natus quod quidem consequuntur, placeat necessitatibus porro nostrum autem ullam suscipit eum aliquid. Ipsam pariatur, nostrum recusandae voluptatibus, animi reprehenderit dicta minima ipsa tempore soluta cupiditate, quam harum impedit explicabo officiis alias nemo. Impedit dolorem accusantium at repellat possimus perspiciatis dolor, omnis vel eveniet quasi inventore, consectetur explicabo laudantium maxime? Aspernatur omnis ipsam odit aliquam ex maxime consectetur, debitis vel temporibus vero! Ipsum cupiditate autem rerum rem similique, totam quidem asperiorluptate iure, assumenda atque excepturi dicta possimus perferendis tempora? Excepturi, dicta ut? Laudantium, iusto quam exercitationem, sequi neque in dolorum, id voluptas reprehenderit veritatis incidunt? Consequuntur distinctio ducimus, excepturi qui soluta libero unde autem quia quisquam. Corrupti quia iusto ut. Quibusdam, velit sapiente, ad temporibus veritatis possimus blanditiis porro eaque iusto dignissimos aut nobis sint?</h1>
 <div class="row">
-  {{candidateInfoById.candidateId}}
-  {{candidateInfoById.candidateName}}
+  <div class="col-md-6">
+    <div class="card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-6">
+            <p>
+              <strong>Referred By:</strong> {{ candidateInfoById.referredBy }}
+            </p>
+            <p><b>Candidate Name:</b> {{ candidateInfoById.candidateName }}</p>
+            <p><b>Experience:</b> {{ candidateInfoById.experience }}</p>
+            <p><b>Last Employer:</b> {{ candidateInfoById.lastEmployer }}</p>
+            <p>
+              <b>Last Designation:</b> {{ candidateInfoById.lastDesignation }}
+            </p>
+          </div>
+
+          <div class="col-md-6">
+            <p>
+              <b>Round Name:</b>
+              {{ candidateInfoById.roundName }}
+            </p>
+            <p>
+              <b>Interview Date:</b>
+              {{ candidateInfoById.interviewDate | date }}
+            </p>
+            <p>
+              <b>Interviewer Name:</b> {{ candidateInfoById.interviewerName }}
+            </p>
+            <p><b>Round Status:</b> {{ candidateInfoById.candidateStatus }}</p>
+            <p><b>Notice Period:</b> {{ candidateInfoById.noticePeriod }}</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <button
+              type="button"
+              class="btn btn-info"
+              (click)="gotopage('UpdateCandidate')"
+            >
+              Edit
+            </button>
+          </div>
+          <div class="col">
+            <button class="btn btn-danger" type="button">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

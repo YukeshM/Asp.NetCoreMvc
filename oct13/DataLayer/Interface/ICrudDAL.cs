@@ -26,6 +26,14 @@ namespace DataLayer.Interface
         IEnumerable<GetSource> GetSource();
 
 
+        IEnumerable<GetSkill> GetSkill();
+
+        IEnumerable<GetRound> GetRound();
+
+        IEnumerable<GetInterviewer> GetInterviewer();
+
+        void UpdateCanidateRoundInformation(UpdateCandidateRoundInformation updateCandidateRoundInformation);
+
         void Update(UpdateRoundInfoByCandidateId updateRoundInfoByCandidateId);
     }
 }

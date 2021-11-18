@@ -21,7 +21,12 @@ namespace BusinessLayer.Interface
 
         IEnumerable<GetSourceBAL> GetSource();
 
+        IEnumerable<GetSkillBAL> GetSkill();
+        IEnumerable<GetRoundBAL> GetRound();
 
+        IEnumerable<GetInterviewerBAL> GetInterviewer();
+
+        void UpdateCanidateRoundInformation(UpdateCandidateRoundInformationBAL updateCandidateRoundInformation);
 
         void Update(UpdateRoundInfoByCandidateIdBAL updateRoundInfoByCandidateId);
     }

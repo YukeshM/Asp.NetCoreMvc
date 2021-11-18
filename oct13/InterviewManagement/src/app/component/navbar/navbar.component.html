@@ -1,44 +1,59 @@
-<div class="row">
-  <div class="col-3">
-    <!-- <nav class="navbar"> -->
-    <ul>
-      <li>
-        <a routerLink="CandidateInformation" routerLinkActive="active"
-          >Candidate Details</a
-        >
-      </li>
-      <li>
-        <a routerLink="CandidateInterviewInformation" routerLinkActive="active"
-          >Candidate's Interviewer Details</a
-        >
-      </li>
-      <li>
-        <a routerLink="CandidateRoundInformation" routerLinkActive="active"
-          >Candidate's Round Information</a
-        >
-      </li>
-      <li>
-        <a routerLink="InterviewerFeedback" routerLinkActive="active"
-          >Interviewer Feedback</a
-        >
-      </li>
+<nav class="navbar">
+  <ul class="navbar-nav">
+    <li class="logo">
+      <i class="fa fa-lg fa-glide-g"></i>
+      <span class="link-text">Gislen</span>
+    </li>
+    <li class="nav-item">
+      <i class="fa fa-lg fa-user"></i>
+      <a
+        class="link-text"
+        routerLink="CandidateInformation"
+        routerLinkActive="active"
+        >Candidate Details</a
+      >
+    </li>
 
-      <li>
-        <a routerLink="InterviewerCandidateDetails" routerLinkActive="active"
-          >Interviewer Candidate Details</a
-        >
-      </li>
+    <li class="nav-item">
+      <i class="fa fa-lg fa-user-plus"></i>
 
-      <li>
-        <a routerLink="CreateSoftSkill" routerLinkActive="active"
-          >Create soft skill</a
-        >
-      </li>
+      <a
+        class="link-text"
+        routerLink="CandidateInterviewInformation"
+        routerLinkActive="active"
+        >Candidate's Interviewer Details</a
+      >
+    </li>
 
-      <li>
-        <a routerLinkActive="active" routerLink="CreateTechnicalSkill">Create Technical skill</a>
-      </li>
-    </ul>
-    <!-- </nav> -->
-  </div>
-</div>
+    <li class="nav-item">
+      <i class="fa fa-lg fa-users"></i>
+
+      <a
+        class="link-text"
+        routerLink="CandidateRoundInformation"
+        routerLinkActive="active"
+        >Candidate's Round Information
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <i class="fa fa-lg fa-comment"></i>
+      <a
+        class="link-text"
+        routerLink="InterviewerFeedback"
+        routerLinkActive="active"
+        >Interviewer Feedback</a
+      >
+    </li>
+
+    <li class="nav-item">
+      <i class="fa fa-lg fa-info"></i>
+      <a
+        class="link-text"
+        routerLink="InterviewerCandidateDetails"
+        routerLinkActive="active"
+        >Interviewer Candidate Details</a
+      >
+    </li>
+  </ul>
+</nav>

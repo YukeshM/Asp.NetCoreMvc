@@ -75,12 +75,16 @@ namespace BusinessLayer.Method
                         CandidateStatus = candidateList[i].CandidateStatus,
                         Experience = candidateList[i].Experience,
                         InterviewDate = candidateList[i].InterviewDate,
+                        InterviewerId = candidateList[i].InterviewerId,
                         InterviewerName = candidateList[i].InterviewerName,
                         LastDesignation = candidateList[i].LastDesignation,
                         LastEmployer = candidateList[i].LastEmployer,
                         NoticePeriod = candidateList[i].NoticePeriod,
                         ReferredBy = candidateList[i].ReferredBy,
+                        RoundInformationId = candidateList[i].RoundInformationId,
                         RoundName = candidateList[i].RoundName,
+                        CandidateStatusId = candidateList[i].CandidateStatusId,
+                        SourceId = candidateList[i].SourceId,
                         SourceName = candidateList[i].SourceName,
                         MedicalStatus = candidateList[i].MedicalStatus
                     };
@@ -106,14 +110,18 @@ namespace BusinessLayer.Method
                     CandidateId = candidateRoundInfo.CandidateId,
                     CandidateName = candidateRoundInfo.CandidateName,
                     ReferredBy = candidateRoundInfo.ReferredBy,
+                    RoundInformationId = candidateRoundInfo.RoundInformationId,
                     RoundName = candidateRoundInfo.RoundName,
                     LastEmployer = candidateRoundInfo.LastEmployer,
                     LastDesignation = candidateRoundInfo.LastDesignation,
                     Experience = candidateRoundInfo.Experience,
                     InterviewDate = candidateRoundInfo.InterviewDate,
+                    InterviewerId = candidateRoundInfo.InterviewerId,
                     InterviewerName = candidateRoundInfo.InterviewerName,
                     NoticePeriod = candidateRoundInfo.NoticePeriod,
+                    CandidateStatusId = candidateRoundInfo.CandidateStatusId,
                     CandidateStatus = candidateRoundInfo.CandidateStatus,
+                    SourceId = candidateRoundInfo.SourceId,
                     SourceName = candidateRoundInfo.SourceName
                 };
                 return candidateRoundDetail;
@@ -154,6 +162,33 @@ namespace BusinessLayer.Method
 
         }
 
+        public IEnumerable<GetInterviewerBAL> GetInterviewer()
+        {
+            try
+            {
+                var detailsFromDB = _crudDAL.GetInterviewer().ToList();
+                var detailsForBAL = new List<GetInterviewerBAL>();
+
+                for (int i = 0; i < detailsFromDB.Count; i++)
+                {
+                    var details = new GetInterviewerBAL()
+                    {
+                        InterviewerId = detailsFromDB[i].InterviewerId,
+                        Name = detailsFromDB[i].Name,
+                        InterviewerSign = detailsFromDB[i].InterviewerSign
+                    };
+                    detailsForBAL.Add(details);
+                }
+
+                return detailsForBAL;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
         public IEnumerable<GetRatingBAL> GetRating()
         {
             try
@@ -178,6 +213,58 @@ namespace BusinessLayer.Method
 
                 throw;
             };
+        }
+
+        public IEnumerable<GetRoundBAL> GetRound()
+        {
+            try
+            {
+                var detailsFromDB = _crudDAL.GetRound().ToList();
+                var detailsForBAL = new List<GetRoundBAL>();
+
+                for (int i = 0; i < detailsFromDB.Count; i++)
+                {
+                    var details = new GetRoundBAL()
+                    {
+                        RoundInformationId = detailsFromDB[i].RoundInformationId,
+                        RoundName = detailsFromDB[i].RoundName
+                    };
+                    detailsForBAL.Add(details);
+                }
+                return detailsForBAL;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public IEnumerable<GetSkillBAL> GetSkill()
+        {
+            try
+            {
+                var detailsFromDB = _crudDAL.GetSkill().ToList();
+                var detailsForBAL = new List<GetSkillBAL>();
+
+                for (int i = 0; i < detailsFromDB.Count; i++)
+                {
+                    var details = new GetSkillBAL()
+                    {
+                        SkillId = detailsFromDB[i].SkillId,
+                        SkillName = detailsFromDB[i].SkillName
+                    };
+
+                    detailsForBAL.Add(details);
+                }
+
+                return detailsForBAL;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public IEnumerable<GetSourceBAL> GetSource()
@@ -218,6 +305,19 @@ namespace BusinessLayer.Method
                 StatusId = updateRoundInfoByCandidateId.StatusId
             };
             _crudDAL.Update(updatedCandidateInfo);
+        }
+
+        public void UpdateCanidateRoundInformation(UpdateCandidateRoundInformationBAL updateCandidateRoundInformation)
+        {
+            try
+            {
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

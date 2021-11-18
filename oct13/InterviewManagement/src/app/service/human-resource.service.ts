@@ -4,8 +4,12 @@ import { Observable } from 'rxjs';
 import { CreateCandidate } from '../CustomModel/create-candidate';
 import { GetCandidateRound } from '../CustomModel/get-candidate-round';
 import { GetCandidateStatus } from '../CustomModel/get-candidate-status';
+import { GetInterviewer } from '../CustomModel/get-interviewer';
 import { GetRating } from '../CustomModel/get-rating';
+import { GetRound } from '../CustomModel/get-round';
+import { GetSkill } from '../CustomModel/get-skill';
 import { GetSource } from '../CustomModel/get-source';
+import { UpdateCandidateRoundInformation } from '../CustomModel/update-candidate-round-information';
 
 
 const url = 'https://localhost:44373/api/InterviewManagement';
@@ -16,6 +20,7 @@ const url = 'https://localhost:44373/api/InterviewManagement';
 
 export class HumanResourceService {
 
+  id = 0;
 
   constructor(private _http: HttpClient) { }
 
@@ -42,4 +47,26 @@ export class HumanResourceService {
   GetRating() : Observable<GetRating[]>{
     return this._http.get<GetRating[]>(url + '/GetRating');
   }
+
+  GetSkill() : Observable<GetSkill[]>{
+    return this._http.get<GetSkill[]>(url + '/GetSkill');
+  }
+
+  GetRound() : Observable<GetRound[]>{
+    return this._http.get<GetRound[]>(url + '/GetRound');
+  }
+
+  GetInterviewer() : Observable<GetInterviewer[]>{
+    return this._http.get<GetInterviewer[]>(url + '/GetInterviewer');
+  }
+  
+  UpdateCandidateRoundInformation(candidateRoundInformation : any)  {
+    console.log(candidateRoundInformation);
+    return this._http.put<UpdateCandidateRoundInformation>(url, '/UpdateCandidateRoundInformation',candidateRoundInformation);
+  }
+//set id for getting candidate details
+  SetId(id : number){
+    this.id = id;
+  }
+
 }

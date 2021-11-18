@@ -1,0 +1,15 @@
+.card {
+  margin-bottom: 20px;
+  background-image: linear-gradient(145deg, #f7ede2, #ffccd5);
+  border-radius: 25px;
+  display: flex;
+}
+.card button{
+  margin-left: 20px;
+  justify-content: center;
+  color: white;
+  background-color: #90caf9;
+  border: 1px solid #4b3f72;
+  font-weight: 700;
+  border-radius: 15px;
+}

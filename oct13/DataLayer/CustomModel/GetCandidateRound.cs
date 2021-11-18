@@ -42,12 +42,22 @@ namespace DataLayer.CustomModel
             get; set;
         }
 
+        public int SourceId
+        {
+            get; set;
+        }
+
         public string SourceName
         {
             get; set;
         }
 
         public string MedicalStatus
+        {
+            get; set;
+        }
+
+        public int RoundInformationId
         {
             get; set;
         }
@@ -62,7 +72,17 @@ namespace DataLayer.CustomModel
             get; set;
         }
 
+        public int InterviewerId
+        {
+            get; set;
+        }
+
         public string InterviewerName
+        {
+            get; set;
+        }
+
+        public int CandidateStatusId
         {
             get; set;
         }
