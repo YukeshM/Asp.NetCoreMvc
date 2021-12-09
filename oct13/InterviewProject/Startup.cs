@@ -3,10 +3,13 @@ using BusinessLayer.Method;
 using DataLayer.Interface;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using System.IO;
 
 namespace InterviewProject
 {
@@ -61,6 +64,12 @@ namespace InterviewProject
             app.UseRouting();
             //cors
             app.UseCors();
+
+            app.UseStaticFiles(new StaticFileOptions 
+            {
+                FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"Resources")),
+                RequestPath = new PathString("/Resources")
+            });
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppRoutingModule, routingComponents } from './app-routing.module';
+import { routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { CandidateInfoComponent } from './component/candidate-info/candidate-info.component';
@@ -11,12 +11,13 @@ import { InterviewerCanditateDetailsComponent } from './component/interviewer-ca
 import { NavbarComponent } from './component/navbar/navbar.component';
 import { HeaderComponent } from './component/header/header.component';
 import { InterviewerFeedbackComponent } from './component/interviewer-feedback/interviewer-feedback.component';
-import{HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { GetCandidateComponent } from './component/get-candidate/get-candidate.component'
 import { ReactiveFormsModule } from '@angular/forms';
 import { InterviewersCandidateComponent } from './component/interviewers-candidate/interviewers-candidate.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { UpdateCandidateComponent } from './component/update-candidate/update-candidate.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -36,10 +37,10 @@ import { UpdateCandidateComponent } from './component/update-candidate/update-ca
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

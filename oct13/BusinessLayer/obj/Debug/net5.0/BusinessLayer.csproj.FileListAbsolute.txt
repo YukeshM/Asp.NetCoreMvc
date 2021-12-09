@@ -12,4 +12,3 @@ D:\gislen\asp.netMvcCore\oct13\BusinessLayer\obj\Debug\net5.0\BusinessLayer.cspr
 D:\gislen\asp.netMvcCore\oct13\BusinessLayer\obj\Debug\net5.0\BusinessLayer.dll
 D:\gislen\asp.netMvcCore\oct13\BusinessLayer\obj\Debug\net5.0\ref\BusinessLayer.dll
 D:\gislen\asp.netMvcCore\oct13\BusinessLayer\obj\Debug\net5.0\BusinessLayer.pdb
-D:\gislen\asp.netMvcCore\oct13\BusinessLayer\obj\Debug\net5.0\BusinessLayer.csproj.CopyComplete

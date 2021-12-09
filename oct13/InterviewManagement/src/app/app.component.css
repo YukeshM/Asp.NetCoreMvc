@@ -1,11 +1,20 @@
 
-/* .container{
-  max-height: 80vh;
-  overflow-y: scroll;
-  } */
-
+a{
+  text-decoration: none;
+  color: white;
+}
 .routerComponent{
   margin: 20px 0 0 200px;
 }
 
+.footer{
+  position:fixed;
+  bottom: 0;
+  padding-top: 10px;
+  margin-bottom: -10px;
+
+  width: 100%;
+  text-align: center;
+  background-color: #0077b6;
+}
 

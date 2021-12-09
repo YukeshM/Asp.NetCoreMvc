@@ -140,7 +140,7 @@ namespace BusinessLayer.Method
             {
                 var detailsFromDb = _crudDAL.GetCandidateStatus().ToList();
                 var detailsForBAL = new List<GetCandidateStatusBAL>();
-                for (int i = 0; i < detailsFromDb.Count; i++)
+                for (var i = 0; i < detailsFromDb.Count; i++)
                 {
                     var details = new GetCandidateStatusBAL()
                     {
@@ -222,7 +222,7 @@ namespace BusinessLayer.Method
                 var detailsFromDB = _crudDAL.GetRound().ToList();
                 var detailsForBAL = new List<GetRoundBAL>();
 
-                for (int i = 0; i < detailsFromDB.Count; i++)
+                for (var i = 0; i < detailsFromDB.Count; i++)
                 {
                     var details = new GetRoundBAL()
                     {

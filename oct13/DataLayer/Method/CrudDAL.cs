@@ -12,6 +12,7 @@ namespace DataLayer.Method
     public class CrudDAL : ICrudDAL
     {
         private readonly string _connectionString;
+
         public CrudDAL(string connectionString)
         {
             this._connectionString = connectionString;
